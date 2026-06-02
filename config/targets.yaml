@@ -1,39 +1,37 @@
 #config_version=6
 
 drop_targets:
-
-  #bownling
+  # Bowling
   bowling1_drop_target:
-   switch: s_bowling1
+    switch: s_bowling1
   bowling2_drop_target:
-   switch: s_bowling2
+    switch: s_bowling2
   bowling3_drop_target:
-   switch: s_bowling3    
-   
-  #slingshot bart
+    switch: s_bowling3
+
+  # Slingshot / Bart, banque de 5 cibles
   sling1_drop_target:
-   switch: s_sling1
+    switch: s_sling1
   sling2_drop_target:
-   switch: s_sling2
+    switch: s_sling2
   sling3_drop_target:
-   switch: s_sling3
+    switch: s_sling3
   sling4_drop_target:
-   switch: s_sling4
+    switch: s_sling4
   sling5_drop_target:
-   switch: s_sling5    
-   
+    switch: s_sling5
+
 drop_target_banks:
-
-  #bowling reset
+  # Bowling reset
   bowling_drop_targets:
-   drop_targets: bowling1_drop_target, bowling2_drop_target, bowling3_drop_target
-   reset_coils: c_drop_bowling
-   reset_on_complete: 1s
-   reset_events: ball_starting
+    drop_targets: bowling1_drop_target, bowling2_drop_target, bowling3_drop_target
+    reset_coils: c_drop_bowling
+    reset_on_complete: 1s
+    reset_events: ball_starting, simpsons_reset_bowling_bank
 
-  #slinghost bart drop target
+  # Slingshot / Bart drop target reset
   slingshot_drop_targets:
-   drop_targets: sling1_drop_target, sling2_drop_target, sling3_drop_target, sling4_drop_target, sling5_drop_target
-   reset_coils: c_drop_slingshot
-   reset_on_complete: 1s
-   reset_events: ball_starting
+    drop_targets: sling1_drop_target, sling2_drop_target, sling3_drop_target, sling4_drop_target, sling5_drop_target
+    reset_coils: c_drop_slingshot
+    reset_on_complete: 1s
+    reset_events: ball_starting, simpsons_reset_right_bank

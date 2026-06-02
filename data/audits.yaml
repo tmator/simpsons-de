@@ -1,58 +1,53 @@
 events:
   game_ended: 0
-  game_started: 3
+  game_started: 12
 missing_switches:
-  s_bowling1: 3
-  s_bowling2: 3
-  s_bowling3: 3
-  s_center_bumper: 3
-  s_center_coin: 3
-  s_center_donut: 3
-  s_center_lock_bottom: 3
-  s_center_lock_top: 3
-  s_chocolate: 3
-  s_chocolate2: 3
-  s_chocolate3: 3
-  s_credit_button: 3
-  s_left_bumper: 3
-  s_left_coin: 3
-  s_left_donut: 3
-  s_left_eos: 3
-  s_left_lock: 3
-  s_left_outlane: 3
-  s_left_return: 3
-  s_left_slingshot: 3
-  s_multiball_start: 3
-  s_outhole: 3
-  s_plumb_tilt: 3
-  s_ramp_entrance: 3
-  s_ramp_exit: 3
-  s_right_bumper: 3
-  s_right_coin: 3
-  s_right_donut: 3
-  s_right_eos: 3
-  s_right_lock: 3
-  s_right_outlane: 3
-  s_right_return: 3
-  s_right_slingshot: 3
-  s_shooter_lane: 1
-  s_slam_tilt: 3
-  s_sling1: 3
-  s_sling2: 3
-  s_sling3: 3
-  s_sling4: 3
-  s_sling5: 3
-  s_spinner: 3
-  s_trough1: 3
-  s_trough2: 3
-  s_trough3: 3
+  s_bowling2: 12
+  s_bowling3: 12
+  s_center_bumper: 12
+  s_center_coin: 12
+  s_center_donut: 12
+  s_center_lock_bottom: 12
+  s_center_lock_top: 12
+  s_chocolate: 12
+  s_chocolate2: 12
+  s_chocolate3: 12
+  s_credit_button: 1
+  s_left_coin: 12
+  s_left_donut: 12
+  s_left_eos: 12
+  s_left_lock: 12
+  s_left_slingshot: 12
+  s_multiball_start: 12
+  s_outhole: 12
+  s_plumb_tilt: 12
+  s_right_bumper: 12
+  s_right_coin: 12
+  s_right_donut: 12
+  s_right_eos: 12
+  s_right_outlane: 12
+  s_right_return: 12
+  s_right_slingshot: 12
+  s_shooter_lane: 10
+  s_slam_tilt: 12
+  s_sling1: 12
+  s_sling2: 12
+  s_sling3: 12
+  s_sling4: 12
+  s_sling5: 12
+  s_spinner: 12
+  s_trough1: 12
+  s_trough2: 12
+  s_trough3: 12
 player:
   score:
     average: 0
     top: []
     total: 0
+shots:
+  sh_bowling1: 2
 switches:
-  s_bowling1: 0
+  s_bowling1: 2
   s_bowling2: 0
   s_bowling3: 0
   s_center_bumper: 0
@@ -63,25 +58,25 @@ switches:
   s_chocolate: 0
   s_chocolate2: 0
   s_chocolate3: 0
-  s_credit_button: 0
-  s_left_bumper: 0
+  s_credit_button: 10
+  s_left_bumper: 5
   s_left_coin: 0
   s_left_donut: 0
   s_left_eos: 0
   s_left_lock: 0
-  s_left_outlane: 0
-  s_left_return: 0
+  s_left_outlane: 3
+  s_left_return: 4
   s_left_slingshot: 0
   s_multiball_start: 0
   s_outhole: 0
   s_plumb_tilt: 0
-  s_ramp_entrance: 0
-  s_ramp_exit: 0
+  s_ramp_entrance: 4
+  s_ramp_exit: 3
   s_right_bumper: 0
   s_right_coin: 0
   s_right_donut: 0
   s_right_eos: 0
-  s_right_lock: 0
+  s_right_lock: 1
   s_right_outlane: 0
   s_right_return: 0
   s_right_slingshot: 0

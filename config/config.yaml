@@ -23,24 +23,26 @@ config:
 
 playfields:
   playfield:
-   default_source_device: bd_plung #TODO
-   tags: default
+    default_source_device: bd_plung #TODO
+    tags: default
+
 game:
   balls_per_game: 3
 
 ball_devices:
-  #ejection de la bille dans le lanceur
+  # Ejection de la bille dans le lanceur
   bd_plung:
-   ball_switches: s_trough1, s_trough2, s_trough3
-   eject_coil: c_eject  
-   eject_targets: playfield
-   tags: home, trough
-  #drain  
+    ball_switches: s_trough1, s_trough2, s_trough3
+    eject_coil: c_eject
+    eject_targets: playfield
+    tags: home, trough
+
+  # Drain
   bd_drain:
-   ball_switches: s_outhole
-   eject_coil: c_outhole
-   eject_targets: bd_plung
-   tags: drain
+    ball_switches: s_outhole
+    eject_coil: c_outhole
+    eject_targets: bd_plung
+    tags: drain
 
   bd_left_lock:
     ball_switches: s_left_lock
@@ -57,25 +59,26 @@ ball_devices:
     eject_coil: c_lock_strip
     eject_targets: playfield
 
-
 autofire_coils:
- left_slingshot:
-  coil: c_left_slingshot
-  switch: s_left_slingshot
- right_slingshot:
-  coil: c_right_slingshot
-  switch: s_right_slingshot
- left_bumper:
-  coil: c_left_bumper
-  switch: s_left_bumper
- right_bumper:
-  coil: c_right_bumper
-  switch: s_right_bumper
- center_bumper:
-  coil: c_center_bumper
-  switch: s_center_bumper
+  left_slingshot:
+    coil: c_left_slingshot
+    switch: s_left_slingshot
+  right_slingshot:
+    coil: c_right_slingshot
+    switch: s_right_slingshot
+  left_bumper:
+    coil: c_left_bumper
+    switch: s_left_bumper
+  right_bumper:
+    coil: c_right_bumper
+    switch: s_right_bumper
+  center_bumper:
+    coil: c_center_bumper
+    switch: s_center_bumper
 
 kickbacks:
- outlane_kickback:
-  coil: c_laser_kick
-  switch: s_left_outlane
+  outlane_kickback:
+    coil: c_laser_kick
+    switch: s_left_outlane
+    enable_events: mode_base_started, simpsons_laser_kick_lit
+    disable_events: simpsons_laser_kick_used, ball_ending

@@ -1,0 +1,866 @@
+#config_version=6
+
+# ---------------------------------------------------------------------------
+# The Simpsons Data East - mode BASE
+# Migration YAML depuis base.py
+# MPF 0.80 / config_version=6
+#
+# Objectif : sortir le maximum de logique du Python et la mettre en config MPF.
+# Le fichier reprend les switches/lampes/variables de base.py.
+# Après installation, lance : mpf check
+# ---------------------------------------------------------------------------
+
+mode:
+  start_events: ball_started
+  stop_events: ball_ending
+  priority: 100
+
+# Variables joueur utilisées par le mode.
+# Elles sont réinitialisées au démarrage du mode base, comme le faisait
+# _ensure_player_defaults() dans base.py.
+variable_player:
+  mode_base_started:
+    bonus_multiplier:
+      action: set
+      int: 1
+    doughnut_multiplier:
+      action: set
+      int: 1
+    bonus_held:
+      action: set
+      int: 0
+    laser_kick_lit:
+      action: set
+      int: 1
+    millions_progress:
+      action: set
+      int: 0
+    millions_lit:
+      action: set
+      int: 0
+    millions_awarded_this_timer:
+      action: set
+      int: 0
+    mystery_lit:
+      action: set
+      int: 0
+    locks_lit:
+      action: set
+      int: 0
+    locks_collected:
+      action: set
+      int: 0
+    jackpot_lit:
+      action: set
+      int: 0
+    jackpot_value:
+      action: set
+      int: 1000000
+    right_bank_award_step:
+      action: set
+      int: 0
+    nuclear_left_value:
+      action: set
+      int: 0
+    nuclear_center_value:
+      action: set
+      int: 0
+    nuclear_right_value:
+      action: set
+      int: 0
+    double_score_until_drain:
+      action: set
+      int: 0
+    two_ball_started:
+      action: set
+      int: 0
+    three_ball_started:
+      action: set
+      int: 0
+    simpsons_last_award:
+      action: set
+      string: ""
+
+  # Scoring centralisé : tous les événements simpsons_score passent ici.
+  # Si double_score_until_drain vaut 1, les points sont doublés.
+  "simpsons_score{current_player.double_score_until_drain==0}":
+    score:
+      int: points
+    simpsons_last_award:
+      action: set
+      string: label
+
+  "simpsons_score{current_player.double_score_until_drain==1}":
+    score:
+      int: points * 2
+    simpsons_last_award:
+      action: set
+      string: label
+
+  # Lanes du haut / Doughnuts / MILLIONS.
+  "top_lanes_complete{current_player.doughnut_multiplier<6}":
+    doughnut_multiplier: 1
+    bonus_multiplier: 1
+
+  "top_lanes_complete{current_player.doughnut_multiplier>=6}":
+    simpsons_last_award:
+      action: set
+      string: Extra Ball Lit
+
+  "top_lanes_hit{current_player.millions_lit==0}":
+    millions_progress: 1
+
+  "s_ramp_exit_active{current_player.millions_lit==0}":
+    millions_progress: 1
+
+  simpsons_millions_lit:
+    millions_lit:
+      action: set
+      int: 1
+    millions_awarded_this_timer:
+      action: set
+      int: 0
+
+  simpsons_millions_timeout:
+    millions_lit:
+      action: set
+      int: 0
+    millions_progress:
+      action: set
+      int: 0
+    millions_awarded_this_timer:
+      action: set
+      int: 0
+
+  simpsons_collect_millions:
+    millions_awarded_this_timer:
+      action: set
+      int: 1
+
+  # Mystery.
+  simpsons_mystery_lit:
+    mystery_lit:
+      action: set
+      int: 1
+
+  simpsons_mystery_timeout:
+    mystery_lit:
+      action: set
+      int: 0
+
+  simpsons_mystery_collected:
+    mystery_lit:
+      action: set
+      int: 0
+
+  simpsons_mystery_award_bonus_hold:
+    bonus_held:
+      action: set
+      int: 1
+
+  simpsons_mystery_award_5x_doughnuts:
+    doughnut_multiplier:
+      action: set
+      int: 5
+    bonus_multiplier:
+      action: set
+      int: 5
+
+  simpsons_mystery_award_double_score:
+    double_score_until_drain:
+      action: set
+      int: 1
+
+  # Chocolate / Laser kick.
+  chocolate_targets_complete:
+    laser_kick_lit:
+      action: set
+      int: 1
+
+  "s_left_outlane_active{current_player.laser_kick_lit==1}":
+    laser_kick_lit:
+      action: set
+      int: 0
+
+  # Nuclear tower values.
+  s_left_bumper_active:
+    nuclear_left_value: 1000
+  s_center_bumper_active:
+    nuclear_center_value: 1000
+  s_right_bumper_active:
+    nuclear_right_value: 1000
+  s_left_return_active:
+    nuclear_left_value: 5000
+  s_right_return_active:
+    nuclear_right_value: 5000
+
+  "simpsons_collect_nuclear_left{current_player.nuclear_left_value>0}":
+    nuclear_left_value:
+      action: set
+      int: 0
+  "simpsons_collect_nuclear_center{current_player.nuclear_center_value>0}":
+    nuclear_center_value:
+      action: set
+      int: 0
+  "simpsons_collect_nuclear_right{current_player.nuclear_right_value>0}":
+    nuclear_right_value:
+      action: set
+      int: 0
+
+  # Bowling / locks.
+  "bowling_targets_complete{current_player.three_ball_started==0}":
+    locks_lit: 1
+  "bowling_targets_complete{current_player.three_ball_started==1}":
+    jackpot_lit:
+      action: set
+      int: 1
+    jackpot_value:
+      action: set
+      int: 1000000
+
+  # Right bank award ladder : Bonus Hold -> Extra Ball -> Special.
+  "right_bank_targets_complete{current_player.right_bank_award_step<=0}":
+    bonus_held:
+      action: set
+      int: 1
+    right_bank_award_step:
+      action: set
+      int: 1
+
+  "right_bank_targets_complete{current_player.right_bank_award_step==1}":
+    right_bank_award_step:
+      action: set
+      int: 2
+
+  "right_bank_targets_complete{current_player.right_bank_award_step>=2}":
+    right_bank_award_step:
+      action: set
+      int: 3
+
+  # Collecte des awards sur les locks.
+  simpsons_bonus_hold_collected:
+    bonus_held:
+      action: set
+      int: 0
+
+  simpsons_extra_ball_collected:
+    right_bank_award_step:
+      action: set
+      int: 0
+
+  simpsons_special_collected:
+    right_bank_award_step:
+      action: set
+      int: 0
+
+  simpsons_ball_locked:
+    locks_lit: -1
+    locks_collected: 1
+
+  player_locks_collected{value==2}:
+    two_ball_started:
+      action: set
+      int: 1
+
+  player_locks_collected{value>=3}:
+    two_ball_started:
+      action: set
+      int: 1
+    three_ball_started:
+      action: set
+      int: 1
+    jackpot_lit:
+      action: set
+      int: 0
+    jackpot_value:
+      action: set
+      int: 1000000
+
+  # Jackpot progressif 1M -> 4M.
+  simpsons_jackpot_collected:
+    jackpot_lit:
+      action: set
+      int: 0
+    jackpot_value:
+      int: current_player.jackpot_value + 1000000
+
+  # Reset de fin de balle pour les effets temporaires.
+  ball_ending:
+    double_score_until_drain:
+      action: set
+      int: 0
+
+# ---------------------------------------------------------------------------
+# Shots et shot groups
+# ---------------------------------------------------------------------------
+
+shot_profiles:
+  prof_on_off:
+    states:
+      - name: unlit
+        show: off
+      - name: lit
+        show: on
+    loop: false
+
+shots:
+  # Top lanes
+  sh_top_lane_left:
+    switch: s_top_lane_left
+    profile: prof_on_off
+    show_tokens:
+      light: l_top_lane_left
+  sh_top_lane_center:
+    switch: s_top_lane_center
+    profile: prof_on_off
+    show_tokens:
+      light: l_top_lane_center
+  sh_top_lane_right:
+    switch: s_top_lane_right
+    profile: prof_on_off
+    show_tokens:
+      light: l_top_lane_right
+
+  # Chocolate targets
+  sh_chocolate:
+    switch: s_chocolate
+    profile: prof_on_off
+    show_tokens:
+      light: l_chocolate
+  sh_double_chocolate:
+    switch: s_double_chocolate
+    profile: prof_on_off
+    show_tokens:
+      light: l_double_chocolate
+  sh_triple_chocolate:
+    switch: s_triple_chocolate
+    profile: prof_on_off
+    show_tokens:
+      light: l_triple_chocolate
+
+  # Bowling targets
+  sh_bowling_left:
+    switch: s_bowling_left
+    profile: prof_on_off
+    show_tokens:
+      light: l_bowling_left
+  sh_bowling_center:
+    switch: s_bowling_center
+    profile: prof_on_off
+    show_tokens:
+      light: l_bowling_center
+  sh_bowling_right:
+    switch: s_bowling_right
+    profile: prof_on_off
+    show_tokens:
+      light: l_bowling_right
+
+  # Right bank targets
+  sh_right_bank_1_top:
+    switch: s_right_bank_1_top
+    profile: prof_on_off
+    show_tokens:
+      light: l_right_bank_1_top
+  sh_right_bank_2:
+    switch: s_right_bank_2
+    profile: prof_on_off
+    show_tokens:
+      light: l_right_bank_2
+  sh_right_bank_3:
+    switch: s_right_bank_3
+    profile: prof_on_off
+    show_tokens:
+      light: l_right_bank_3
+  sh_right_bank_4:
+    switch: s_right_bank_4
+    profile: prof_on_off
+    show_tokens:
+      light: l_right_bank_4
+  sh_right_bank_5_bottom:
+    switch: s_right_bank_5_bottom
+    profile: prof_on_off
+    show_tokens:
+      light: l_right_bank_5_bottom
+
+shot_groups:
+  top_lanes:
+    shots:
+      - sh_top_lane_left
+      - sh_top_lane_center
+      - sh_top_lane_right
+    reset_events:
+      - top_lanes_complete
+
+  chocolate_targets:
+    shots:
+      - sh_chocolate
+      - sh_double_chocolate
+      - sh_triple_chocolate
+    reset_events:
+      - chocolate_targets_complete
+
+  bowling_targets:
+    shots:
+      - sh_bowling_left
+      - sh_bowling_center
+      - sh_bowling_right
+    reset_events:
+      - bowling_targets_complete
+
+  right_bank_targets:
+    shots:
+      - sh_right_bank_1_top
+      - sh_right_bank_2
+      - sh_right_bank_3
+      - sh_right_bank_4
+      - sh_right_bank_5_bottom
+    reset_events:
+      - right_bank_targets_complete
+
+# ---------------------------------------------------------------------------
+# Events : scoring, awards, logique de routing
+# ---------------------------------------------------------------------------
+
+event_player:
+  # Scores simples.
+  s_left_slingshot_active:
+    simpsons_score:
+      points: 1000
+      label: left_slingshot
+  s_right_slingshot_active:
+    simpsons_score:
+      points: 1000
+      label: right_slingshot
+  s_spinner_active:
+    simpsons_score:
+      points: 1000
+      label: spinner
+  s_ramp_entrance_active:
+    simpsons_score:
+      points: 25000
+      label: ramp_entrance
+  s_ramp_exit_active:
+    simpsons_score:
+      points: 75000
+      label: ramp
+  s_left_return_active:
+    simpsons_score:
+      points: 5000
+      label: left_return
+  s_right_return_active:
+    simpsons_score:
+      points: 5000
+      label: right_return
+  s_left_outlane_active:
+    simpsons_score:
+      points: 5000
+      label: left_outlane
+  s_right_outlane_active:
+    simpsons_score:
+      points: 5000
+      label: right_outlane
+
+  # Scores via shot groups.
+  top_lanes_hit:
+    simpsons_score:
+      points: 10000
+      label: top_lane
+  chocolate_targets_hit:
+    simpsons_score:
+      points: 15000
+      label: chocolate
+  bowling_targets_hit:
+    simpsons_score:
+      points: 25000
+      label: bowling
+  right_bank_targets_hit:
+    simpsons_score:
+      points: 25000
+      label: right_bank_target
+
+  chocolate_targets_complete:
+    simpsons_score:
+      points: 50000
+      label: laser_kick_relit
+    simpsons_laser_kick_lit: {}
+
+  bowling_targets_complete:
+    simpsons_reset_bowling_bank: {}
+
+  "bowling_targets_complete{current_player.three_ball_started==0}":
+    simpsons_score:
+      points: 100000
+      label: lock_lit
+    simpsons_lock_lit: {}
+
+  "bowling_targets_complete{current_player.three_ball_started==1}":
+    simpsons_jackpot_lit: {}
+
+  right_bank_targets_complete:
+    simpsons_reset_right_bank: {}
+
+  "right_bank_targets_complete{current_player.right_bank_award_step<=0}":
+    simpsons_score:
+      points: 100000
+      label: bonus_hold
+    simpsons_bonus_hold_lit: {}
+
+  "right_bank_targets_complete{current_player.right_bank_award_step==1}":
+    simpsons_score:
+      points: 100000
+      label: extra_ball_lit
+    simpsons_extra_ball_lit: {}
+
+  "right_bank_targets_complete{current_player.right_bank_award_step>=2}":
+    simpsons_score:
+      points: 100000
+      label: special_lit
+    simpsons_special_lit: {}
+
+  # MILLIONS : quand les 8 lettres sont allumées.
+  "player_millions_progress{value>=8 and current_player.millions_lit==0}":
+    simpsons_millions_lit: {}
+
+  "s_ramp_exit_active{current_player.jackpot_lit==0 and current_player.millions_lit==1 and current_player.millions_awarded_this_timer==0}":
+    simpsons_collect_millions: {}
+
+  simpsons_collect_millions:
+    simpsons_score:
+      points: 1000000
+      label: millions
+    simpsons_million_collected: {}
+
+  # Mystery : la rampe allume le mystery si rien de prioritaire n'est en cours.
+  "s_ramp_exit_active{current_player.jackpot_lit==0 and current_player.millions_lit==0 and current_player.mystery_lit==0}":
+    simpsons_mystery_lit: {}
+
+  "s_ramp_exit_active{current_player.jackpot_lit==0 and current_player.millions_lit==0 and current_player.mystery_lit==1}":
+    simpsons_collect_mystery: {}
+
+  simpsons_collect_mystery:
+    simpsons_mystery_collected: {}
+
+  # Mystery awards.
+  simpsons_mystery_award_500k:
+    simpsons_score:
+      points: 500000
+      label: mystery_500k
+  simpsons_mystery_award_catch_up:
+    simpsons_score:
+      points: 250000
+      label: mystery_catch_up
+  simpsons_mystery_award_bonus_hold:
+    simpsons_score:
+      points: 100000
+      label: mystery_bonus_hold
+  simpsons_mystery_award_extra_ball:
+    simpsons_award_extra_ball: {}
+  simpsons_mystery_award_5x_doughnuts:
+    simpsons_score:
+      points: 50000
+      label: mystery_5x
+  simpsons_mystery_award_double_score:
+    simpsons_score:
+      points: 50000
+      label: mystery_double_score
+
+  # Laser kick utilisé.
+  "s_left_outlane_active{current_player.laser_kick_lit==1}":
+    simpsons_laser_kick_used: {}
+
+  # Nuclear collect : priorité avant lock/award.
+  "s_left_lock_active{current_player.nuclear_left_value>0}":
+    simpsons_collect_nuclear_left: {}
+    simpsons_score:
+      points: current_player.nuclear_left_value
+      label: nuclear_left
+  "s_center_lock_bottom_active{current_player.nuclear_center_value>0}":
+    simpsons_collect_nuclear_center: {}
+    simpsons_score:
+      points: current_player.nuclear_center_value
+      label: nuclear_center
+  "s_center_lock_top_active{current_player.nuclear_center_value>0}":
+    simpsons_collect_nuclear_center: {}
+    simpsons_score:
+      points: current_player.nuclear_center_value
+      label: nuclear_center
+  "s_right_lock_active{current_player.nuclear_right_value>0}":
+    simpsons_collect_nuclear_right: {}
+    simpsons_score:
+      points: current_player.nuclear_right_value
+      label: nuclear_right
+
+  # Locks : score de base.
+  s_left_lock_active:
+    simpsons_score:
+      points: 25000
+      label: left_lock
+  s_center_lock_bottom_active:
+    simpsons_score:
+      points: 25000
+      label: center_lock
+  s_center_lock_top_active:
+    simpsons_score:
+      points: 25000
+      label: center_lock
+  s_right_lock_active:
+    simpsons_score:
+      points: 25000
+      label: right_lock
+
+  # Bonus Hold sur lock center, si rien de nucléaire à collecter.
+  "s_center_lock_bottom_active{current_player.nuclear_center_value<=0 and current_player.bonus_held==1}":
+    simpsons_bonus_hold_collected: {}
+    simpsons_score:
+      points: 100000
+      label: bonus_hold_collected
+  "s_center_lock_top_active{current_player.nuclear_center_value<=0 and current_player.bonus_held==1}":
+    simpsons_bonus_hold_collected: {}
+    simpsons_score:
+      points: 100000
+      label: bonus_hold_collected
+
+  # Extra Ball sur right lock.
+  "s_right_lock_active{current_player.nuclear_right_value<=0 and current_player.right_bank_award_step>=2}":
+    simpsons_extra_ball_collected: {}
+    simpsons_award_extra_ball: {}
+
+  # Special sur left lock.
+  "s_left_lock_active{current_player.nuclear_left_value<=0 and current_player.right_bank_award_step>=3}":
+    simpsons_special_collected: {}
+    simpsons_score:
+      points: 1000000
+      label: special
+
+  # Collecte de locks pour multiball.
+  "s_left_lock_active{current_player.nuclear_left_value<=0 and current_player.locks_lit>0 and current_player.right_bank_award_step<3}":
+    simpsons_ball_locked: {}
+  "s_center_lock_bottom_active{current_player.nuclear_center_value<=0 and current_player.locks_lit>0}":
+    simpsons_ball_locked: {}
+  "s_center_lock_top_active{current_player.nuclear_center_value<=0 and current_player.locks_lit>0}":
+    simpsons_ball_locked: {}
+  "s_right_lock_active{current_player.nuclear_right_value<=0 and current_player.locks_lit>0 and current_player.right_bank_award_step<2}":
+    simpsons_ball_locked: {}
+
+  player_locks_collected{value==2}:
+    simpsons_start_two_ball: {}
+  player_locks_collected{value>=3}:
+    simpsons_start_three_ball: {}
+
+  # Jackpot.
+  "s_ramp_exit_active{current_player.jackpot_lit==1}":
+    simpsons_jackpot_collected: {}
+    simpsons_score:
+      points: current_player.jackpot_value
+      label: jackpot
+
+  # Extra Ball award centralisé.
+  simpsons_award_extra_ball:
+    simpsons_score:
+      points: 100000
+      label: extra_ball
+
+# Random Mystery Award.
+random_event_player:
+  simpsons_collect_mystery:
+    events:
+      - simpsons_mystery_award_500k
+      - simpsons_mystery_award_catch_up
+      - simpsons_mystery_award_bonus_hold
+      - simpsons_mystery_award_extra_ball
+      - simpsons_mystery_award_5x_doughnuts
+      - simpsons_mystery_award_double_score
+
+# ---------------------------------------------------------------------------
+# Timers
+# ---------------------------------------------------------------------------
+
+timers:
+  millions_timer:
+    start_value: 14
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: false
+    control_events:
+      - event: simpsons_millions_lit
+        action: restart
+    complete_events:
+      - simpsons_millions_timeout
+
+  mystery_timer:
+    start_value: 10
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: false
+    control_events:
+      - event: simpsons_mystery_lit
+        action: restart
+      - event: simpsons_mystery_collected
+        action: stop
+    complete_events:
+      - simpsons_mystery_timeout
+
+# ---------------------------------------------------------------------------
+# Lights
+# ---------------------------------------------------------------------------
+
+light_player:
+  # MILLIONS letters.
+  "player_millions_progress{value<1}":
+    l_millions_m: off
+  "player_millions_progress{value>=1}":
+    l_millions_m: on
+  "player_millions_progress{value<2}":
+    l_millions_i1: off
+  "player_millions_progress{value>=2}":
+    l_millions_i1: on
+  "player_millions_progress{value<3}":
+    l_millions_l1: off
+  "player_millions_progress{value>=3}":
+    l_millions_l1: on
+  "player_millions_progress{value<4}":
+    l_millions_l2: off
+  "player_millions_progress{value>=4}":
+    l_millions_l2: on
+  "player_millions_progress{value<5}":
+    l_millions_i2: off
+  "player_millions_progress{value>=5}":
+    l_millions_i2: on
+  "player_millions_progress{value<6}":
+    l_millions_o: off
+  "player_millions_progress{value>=6}":
+    l_millions_o: on
+  "player_millions_progress{value<7}":
+    l_millions_n: off
+  "player_millions_progress{value>=7}":
+    l_millions_n: on
+  "player_millions_progress{value<8}":
+    l_millions_s: off
+  "player_millions_progress{value>=8}":
+    l_millions_s: on
+
+  # Multipliers.
+  "player_doughnut_multiplier{value<2}":
+    l_2x: off
+  "player_doughnut_multiplier{value>=2}":
+    l_2x: on
+  "player_doughnut_multiplier{value<3}":
+    l_3x: off
+  "player_doughnut_multiplier{value>=3}":
+    l_3x: on
+  "player_doughnut_multiplier{value<4}":
+    l_4x: off
+  "player_doughnut_multiplier{value>=4}":
+    l_4x: on
+  "player_doughnut_multiplier{value<5}":
+    l_5x: off
+  "player_doughnut_multiplier{value>=5}":
+    l_5x: on
+  "player_doughnut_multiplier{value<6}":
+    l_6x: off
+  "player_doughnut_multiplier{value>=6}":
+    l_6x: on
+
+  "player_bonus_held{value==0}":
+    l_bonus_held: off
+    l_arrow_bonus_hold: off
+  "player_bonus_held{value==1}":
+    l_bonus_held: on
+    l_arrow_bonus_hold: on
+
+  # Mystery / Laser.
+  "player_mystery_lit{value==0}":
+    l_ramp_mystery: off
+  "player_mystery_lit{value==1}":
+    l_ramp_mystery: on
+  "player_laser_kick_lit{value==0}":
+    l_laser_kick: off
+  "player_laser_kick_lit{value==1}":
+    l_laser_kick: on
+
+  # Right bank award ladder.
+  "player_right_bank_award_step{value<1}":
+    l_right_bank_bonus_hold: off
+  "player_right_bank_award_step{value>=1}":
+    l_right_bank_bonus_hold: on
+  "player_right_bank_award_step{value<2}":
+    l_right_bank_extra_ball: off
+    l_arrow_extra_ball: off
+  "player_right_bank_award_step{value==2}":
+    l_right_bank_extra_ball: on
+    l_arrow_extra_ball: on
+  "player_right_bank_award_step{value<3}":
+    l_right_bank_special: off
+    l_arrow_special: off
+  "player_right_bank_award_step{value>=3}":
+    l_right_bank_special: on
+    l_arrow_special: on
+
+  # Locks.
+  "player_locks_lit{value<1}":
+    l_left_lock: off
+  "player_locks_lit{value>=1}":
+    l_left_lock: on
+  "player_locks_lit{value<2}":
+    l_center_lock: off
+  "player_locks_lit{value>=2}":
+    l_center_lock: on
+  "player_locks_lit{value<3}":
+    l_right_lock: off
+  "player_locks_lit{value>=3}":
+    l_right_lock: on
+
+  # Nuclear bumpers.
+  "player_nuclear_left_value{value<=0}":
+    l_left_bumper: off
+  "player_nuclear_left_value{value>0}":
+    l_left_bumper: on
+  "player_nuclear_center_value{value<=0}":
+    l_center_bumper: off
+  "player_nuclear_center_value{value>0}":
+    l_center_bumper: on
+  "player_nuclear_right_value{value<=0}":
+    l_right_bumper: off
+  "player_nuclear_right_value{value>0}":
+    l_right_bumper: on
+
+  # Jackpot.
+  "player_jackpot_lit{value==0}":
+    l_ramp_jackpot: off
+    l_jackpot: off
+    l_jackpot_1m: off
+    l_jackpot_2m: off
+    l_jackpot_3m: off
+    l_jackpot_4m: off
+
+  "player_jackpot_lit{value==1}":
+    l_ramp_jackpot: on
+    l_jackpot: on
+
+  "player_jackpot_value{value<=1000000 and current_player.jackpot_lit==1}":
+    l_jackpot_1m: on
+    l_jackpot_2m: off
+    l_jackpot_3m: off
+    l_jackpot_4m: off
+  "player_jackpot_value{value==2000000 and current_player.jackpot_lit==1}":
+    l_jackpot_1m: off
+    l_jackpot_2m: on
+    l_jackpot_3m: off
+    l_jackpot_4m: off
+  "player_jackpot_value{value==3000000 and current_player.jackpot_lit==1}":
+    l_jackpot_1m: off
+    l_jackpot_2m: off
+    l_jackpot_3m: on
+    l_jackpot_4m: off
+  "player_jackpot_value{value>=4000000 and current_player.jackpot_lit==1}":
+    l_jackpot_1m: off
+    l_jackpot_2m: off
+    l_jackpot_3m: off
+    l_jackpot_4m: on
+
+# Le Python pulsait c_knocker pour le special. En YAML, c'est plus propre ici.
+coil_player:
+  simpsons_special_collected:
+    c_knocker: pulse

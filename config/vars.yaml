@@ -1,16 +1,68 @@
 #config_version=6
 
-#player_vars:
-#  score:
-#    initial_value: 0
+# Variables joueur globales du projet.
+# Ce fichier est chargé depuis config.yaml à la racine.
+# Les initial_value servent à créer les variables proprement au début d'une partie.
+# Le mode base les remet ensuite à l'état voulu au début de chaque balle.
 
-#variable_player:
- # #bumpers
- # s_bottom_bumper_active:
- #   score: 1000
- # s_top_left_bumper_active:
- #   score: 1000
- # s_top_right_bumper_active:
- #   score: 1000
-
-  
+player_vars:
+  bonus_multiplier:
+    initial_value: 1
+    value_type: int
+  doughnut_multiplier:
+    initial_value: 1
+    value_type: int
+  bonus_held:
+    initial_value: 0
+    value_type: int
+  laser_kick_lit:
+    initial_value: 1
+    value_type: int
+  millions_progress:
+    initial_value: 0
+    value_type: int
+  millions_lit:
+    initial_value: 0
+    value_type: int
+  millions_awarded_this_timer:
+    initial_value: 0
+    value_type: int
+  mystery_lit:
+    initial_value: 0
+    value_type: int
+  locks_lit:
+    initial_value: 0
+    value_type: int
+  locks_collected:
+    initial_value: 0
+    value_type: int
+  jackpot_lit:
+    initial_value: 0
+    value_type: int
+  jackpot_value:
+    initial_value: 1000000
+    value_type: int
+  right_bank_award_step:
+    initial_value: 0
+    value_type: int
+  nuclear_left_value:
+    initial_value: 0
+    value_type: int
+  nuclear_center_value:
+    initial_value: 0
+    value_type: int
+  nuclear_right_value:
+    initial_value: 0
+    value_type: int
+  double_score_until_drain:
+    initial_value: 0
+    value_type: int
+  two_ball_started:
+    initial_value: 0
+    value_type: int
+  three_ball_started:
+    initial_value: 0
+    value_type: int
+  simpsons_last_award:
+    initial_value: ""
+    value_type: str

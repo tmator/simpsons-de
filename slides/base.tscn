@@ -1,13 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://ci7do8kqe24lv"]
+[gd_scene format=3 uid="uid://ci7do8kqe24lv"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_gqrvh"]
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_gqrvh"]
 [ext_resource type="Texture2D" uid="uid://dfyv7ow60mip" path="res://img/fond.png" id="2_ojumu"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_mixwp"]
 
-[node name="Base" type="Control"]
+[node name="Base" type="Control" unique_id=2011035318]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_gqrvh")
 
-[node name="Fond" type="Sprite2D" parent="."]
+[node name="Fond" type="Sprite2D" parent="." unique_id=1180820616]
 position = Vector2(960, 540)
 texture = ExtResource("2_ojumu")
+
+[node name="Label" type="Label" parent="Fond" unique_id=1915287906]
+offset_left = -127.0
+offset_top = -14.0
+offset_right = 79.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "GAME"
+
+[node name="score" type="Label" parent="." unique_id=176483344]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 80.0
+offset_bottom = 23.0
+script = ExtResource("3_mixwp")
+variable_name = "score"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="ball" type="Label" parent="." unique_id=1373081296]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 80.0
+offset_bottom = 63.0
+script = ExtResource("3_mixwp")
+variable_name = "ball"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

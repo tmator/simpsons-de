@@ -1,0 +1,81 @@
+#config_version=6
+
+hardware:
+  platform: smart_virtual
+  #platform: lisy
+#lisy:
+#connection: serial#
+#port: /dev/ttyACM0
+# baud: 115200
+
+modes:
+  - attract
+  - base
+
+virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3
+
+config:
+  - switches.yaml
+  - coils.yaml
+  - lamps.yaml
+  - vars.yaml
+  - targets.yaml
+
+playfields:
+  playfield:
+   default_source_device: bd_plung #TODO
+   tags: default
+game:
+  balls_per_game: 3
+
+ball_devices:
+  #ejection de la bille dans le lanceur
+  bd_plung:
+   ball_switches: s_trough1, s_trough2, s_trough3
+   eject_coil: c_eject  
+   eject_targets: playfield
+   tags: home, trough
+  #drain  
+  bd_drain:
+   ball_switches: s_outhole
+   eject_coil: c_outhole
+   eject_targets: bd_plung
+   tags: drain
+
+  bd_left_lock:
+    ball_switches: s_left_lock
+    eject_coil: c_lock_maggie
+    eject_targets: playfield
+
+  bd_center_lock:
+    ball_switches: s_center_lock_bottom, s_center_lock_top
+    eject_coil: c_lock_tarzan
+    eject_targets: playfield
+
+  bd_right_lock:
+    ball_switches: s_right_lock
+    eject_coil: c_lock_strip
+    eject_targets: playfield
+
+
+autofire_coils:
+ left_slingshot:
+  coil: c_left_slingshot
+  switch: s_left_slingshot
+ right_slingshot:
+  coil: c_right_slingshot
+  switch: s_right_slingshot
+ left_bumper:
+  coil: c_left_bumper
+  switch: s_left_bumper
+ right_bumper:
+  coil: c_right_bumper
+  switch: s_right_bumper
+ center_bumper:
+  coil: c_center_bumper
+  switch: s_center_bumper
+
+kickbacks:
+ outlane_kickback:
+  coil: c_laser_kick
+  switch: s_left_outlane

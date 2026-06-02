@@ -1,0 +1,16 @@
+#config_version=6
+
+#player_vars:
+#  score:
+#    initial_value: 0
+
+#variable_player:
+ # #bumpers
+ # s_bottom_bumper_active:
+ #   score: 1000
+ # s_top_left_bumper_active:
+ #   score: 1000
+ # s_top_right_bumper_active:
+ #   score: 1000
+
+  

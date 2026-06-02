@@ -1,12 +1,19 @@
 #config_version=6
 
+mode:
+  start_events: reset_complete
+  stop_events: game_started
+  priority: 10
+  game_mode: false
+
 slide_player:
   mode_attract_started: attract
 
 sound_player:
- mode_attract_started:
-   intro_music:
-     bus: music
- mode_attract_stopped:
-  intro_music:
-   action: stop
+  mode_attract_started:
+    intro_music:
+      bus: music
+
+  mode_attract_stopped:
+    intro_music:
+      action: stop
