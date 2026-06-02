@@ -1,3 +1,6 @@
 #Simpsons data east mpf
 
-fichiers de conf et target ok
+#conf switchs, coil, lamp ok
+#attrac basique ok
+#base wip
+
