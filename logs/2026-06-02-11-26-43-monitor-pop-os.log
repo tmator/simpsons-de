@@ -1,0 +1,7 @@
+2026-06-02 11:26:43,748 : INFO : root : Loading MPF Monitor Version 0.57.2
+2026-06-02 11:26:43,793 : INFO : Core : Looking for MPF at localhost:5051
+2026-06-02 11:27:01,295 : INFO : Core : No device selected to resize
+2026-06-02 11:28:18,852 : INFO : BCP Client : Connected to MPF.
+2026-06-02 11:32:12,153 : INFO : root : MPF Monitor run loop ended.
+2026-06-02 11:32:12,153 : INFO : root : Stopping child threads... (3 remaining)
+2026-06-02 11:32:12,954 : INFO : root : All child threads stopped.

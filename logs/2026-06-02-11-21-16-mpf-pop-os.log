@@ -1,0 +1,42 @@
+2026-06-02 11:21:16,280 : INFO : root : Loading config.
+2026-06-02 11:21:16,521 : INFO : ConfigProcessor : Config spec file cache created: /tmp/config_spec.mpf_cache
+2026-06-02 11:21:16,521 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2026-06-02 11:21:16,522 : INFO : ConfigProcessor : Loading config from cache: /tmp/a9f758074c4719bec73a40b7e322c3da.mpf_cache
+2026-06-02 11:21:16,565 : INFO : ConfigProcessor : Loading config from cache: /tmp/2cf941c3a47e1ba6ac27add0b513321d.mpf_cache
+2026-06-02 11:21:16,565 : INFO : ConfigProcessor : Loading config from cache: /tmp/0fd1dccdc7db229b2ce4cdd9f5c444af.mpf_cache
+2026-06-02 11:21:16,566 : INFO : ConfigProcessor : Loading config from cache: /tmp/2cf941c3a47e1ba6ac27add0b513321d.mpf_cache
+2026-06-02 11:21:16,566 : INFO : ConfigProcessor : Loading config from cache: /tmp/bf7de23a2a3c1db7258b8477779eece5.mpf_cache
+2026-06-02 11:21:16,566 : INFO : Machine : Mission Pinball Framework Core Engine v0.80.0
+2026-06-02 11:21:16,567 : INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': True, 'configfile': ['config.yaml'], 'force_assets_load': False, 'platform_integration_test': False, 'jsonlogging': False, 'logfile': 'logs/2026-06-02-11-21-16-mpf-pop-os.log', 'pause': False, 'production': False, 'text_ui': True, 'loglevel': 15, 'consoleloglevel': 10, 'force_platform': 'smart_virtual', 'syslog_address': None, 'full_logfile_path': '/home/rouanet/Documents/SimpsonsMpf/logs/2026-06-02-11-21-16-mpf-pop-os.log'}
+2026-06-02 11:21:16,567 : INFO : Machine : MPF path: /home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf
+2026-06-02 11:21:16,567 : INFO : Machine : Machine path: /home/rouanet/Documents/SimpsonsMpf
+2026-06-02 11:21:16,567 : INFO : Machine : Platform: linux
+2026-06-02 11:21:16,567 : INFO : Machine : Python executable location: /home/rouanet/mpf/.venv/bin/python3.14
+2026-06-02 11:21:16,567 : INFO : Machine : Python version: 3.14.5 (64-bit)
+2026-06-02 11:21:16,568 : INFO : Machine : Initializing MPF...
+2026-06-02 11:21:16,613 : INFO : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2026-06-02 11:21:16,623 : INFO : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 0.5, 'prev_value': None, 'change': True}
+2026-06-02 11:21:16,623 : INFO : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'Mission Pinball Framework v0.80.0', 'prev_value': None, 'change': True}
+2026-06-02 11:21:16,623 : INFO : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'Mission Pinball Framework v0.80.0, Config version:6, Show version: 6, BCP version:1.1', 'prev_value': None, 'change': True}
+2026-06-02 11:21:16,623 : INFO : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.14.5', 'prev_value': None, 'change': True}
+2026-06-02 11:21:16,625 : INFO : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'Linux-6.18.7-76061807-generic-x86_64-with-glibc2.39', 'prev_value': None, 'change': True}
+2026-06-02 11:21:16,625 : INFO : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Linux', 'prev_value': None, 'change': True}
+2026-06-02 11:21:16,625 : INFO : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '6.18.7-76061807-generic', 'prev_value': None, 'change': True}
+2026-06-02 11:21:16,625 : INFO : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': '#202601231045~1778249322~24.04~b44a3c3 SMP PREEMPT_DYNAMIC Fri M', 'prev_value': None, 'change': True}
+2026-06-02 11:21:16,625 : INFO : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'x86_64', 'prev_value': None, 'change': True}
+2026-06-02 11:21:16,625 : INFO : EventManager : Event: ======'machine_var_log_file_path'====== Args={'value': '/home/rouanet/Documents/SimpsonsMpf/logs/2026-06-02-11-21-16-mpf-pop-os.log', 'prev_value': None, 'change': True}
+2026-06-02 11:21:16,625 : INFO : EventManager : Event: ======'init_phase_1'====== Args={}
+2026-06-02 11:21:16,651 : INFO : EventManager : Event: ======'drop_target_bank_bowling_drop_targets_up'====== Args={}
+2026-06-02 11:21:16,651 : INFO : EventManager : Event: ======'drop_target_bank_slingshot_drop_targets_up'====== Args={}
+2026-06-02 11:21:16,652 : INFO : EventManager : Event: ======'init_phase_2'====== Args={}
+2026-06-02 11:21:16,652 : INFO : SwitchController : Found active switch: ('11', <Platform.SmartVirtual>) <switch.s_trough1>
+2026-06-02 11:21:16,652 : INFO : SwitchController : Found active switch: ('12', <Platform.SmartVirtual>) <switch.s_trough2>
+2026-06-02 11:21:16,652 : INFO : SwitchController : Found active switch: ('13', <Platform.SmartVirtual>) <switch.s_trough3>
+2026-06-02 11:21:16,654 : INFO : EventManager : Event: ======'bcp_connection_attempt'====== Args={'name': 'local_display', 'host': 'localhost', 'port': 5050}
+2026-06-02 11:21:16,655 : INFO : BCPClientSocket : Connecting BCP to 'local_display' at localhost:5050...
+2026-06-02 11:21:31,348 : INFO : Machine : Starting the main run loop with active modes: []
+2026-06-02 11:21:31,348 : WARNING : Machine : Attract mode is not active, game will not be playable. Please check your attract mode configuration.
+2026-06-02 11:21:31,348 : INFO : Machine : Shutting down...
+2026-06-02 11:21:31,348 : INFO : EventManager : Event: ======'shutdown'====== Args={}
+2026-06-02 11:21:32,324 : ERROR : root : Received second SIGINT. Will exit ungracefully!
+NoneType: None

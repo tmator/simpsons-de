@@ -1,0 +1,52 @@
+#config_version=6
+
+
+coils:
+  c_outhole:        #flash shoot again
+   number: 1
+  c_eject:        #flash bonus hold
+   number: 2 
+  c_lock_maggie:    #flash homer 
+   number: 3       
+  c_lock_tarzan:    #flash marge
+   number: 4
+  c_flash5:         #flash liza
+   number: 5
+  c_lock_strip:     #flash maggie
+   number: 6
+  c_drop_bowling:        #flash bart
+   number: 7
+  c_knocker:        #flash     
+   number: 8
+  c_flash9:               #flash
+   number: 9
+  c_ac_relay:
+   number: 10
+  c_gi_relay:
+   number: 11
+  c_flash12:
+   number: 12
+  c_flash13:
+   number: 13
+  c_flash14:
+   number: 14
+  c_flash15:
+   number: 15
+  c_laser_kick:
+   number: 16
+  c_left_bumper:
+   number: 17
+  c_center_bumper:
+   number: 18
+  c_right_bumper:
+   number: 19
+  c_left_slingshot:
+   number: 20
+  c_right_slingshot:
+   number: 21
+  c_drop_slingshot:
+   number: 22
+  c_left_flipper:
+   number: 23
+  c_right_flipper:
+   number: 24

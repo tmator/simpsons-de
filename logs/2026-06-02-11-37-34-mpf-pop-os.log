@@ -1,0 +1,7 @@
+2026-06-02 11:37:34,235 : INFO : root : Loading config.
+2026-06-02 11:37:34,475 : INFO : ConfigProcessor : Config spec file cache created: /tmp/config_spec.mpf_cache
+2026-06-02 11:37:34,475 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2026-06-02 11:37:34,476 : WARNING : ConfigProcessor : Config file in cache changed: /home/rouanet/Documents/SimpsonsMpf/config/config.yaml
+2026-06-02 11:37:34,476 : INFO : ConfigProcessor : Loading config from file /home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/mpfconfig.yaml.
+2026-06-02 11:37:34,530 : INFO : ConfigProcessor : Loading config: /home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/mpfconfig.yaml
+2026-06-02 11:37:34,530 : INFO : ConfigProcessor : Loading config from file /home/rouanet/Documents/SimpsonsMpf/config/config.yaml.

@@ -1,0 +1,76 @@
+2026-06-02 10:48:45,496 : INFO : root : Loading config.
+2026-06-02 10:48:45,742 : INFO : ConfigProcessor : Config spec file cache created: /tmp/config_spec.mpf_cache
+2026-06-02 10:48:45,742 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2026-06-02 10:48:45,743 : INFO : ConfigProcessor : Loading config from cache: /tmp/a9f758074c4719bec73a40b7e322c3da.mpf_cache
+2026-06-02 10:48:45,788 : INFO : ConfigProcessor : Loading config from cache: /tmp/2cf941c3a47e1ba6ac27add0b513321d.mpf_cache
+2026-06-02 10:48:45,789 : INFO : ConfigProcessor : Loading config from cache: /tmp/0fd1dccdc7db229b2ce4cdd9f5c444af.mpf_cache
+2026-06-02 10:48:45,789 : INFO : ConfigProcessor : Loading config from cache: /tmp/2cf941c3a47e1ba6ac27add0b513321d.mpf_cache
+2026-06-02 10:48:45,789 : INFO : ConfigProcessor : Loading config from cache: /tmp/bf7de23a2a3c1db7258b8477779eece5.mpf_cache
+2026-06-02 10:48:45,789 : INFO : Machine : Mission Pinball Framework Core Engine v0.80.0
+2026-06-02 10:48:45,790 : INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': True, 'configfile': ['config.yaml'], 'force_assets_load': False, 'platform_integration_test': False, 'jsonlogging': False, 'logfile': 'logs/2026-06-02-10-48-45-mpf-pop-os.log', 'pause': False, 'production': False, 'text_ui': True, 'loglevel': 15, 'consoleloglevel': 20, 'force_platform': None, 'syslog_address': None, 'full_logfile_path': '/home/rouanet/Documents/SimpsonsMpf/logs/2026-06-02-10-48-45-mpf-pop-os.log'}
+2026-06-02 10:48:45,790 : INFO : Machine : MPF path: /home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf
+2026-06-02 10:48:45,790 : INFO : Machine : Machine path: /home/rouanet/Documents/SimpsonsMpf
+2026-06-02 10:48:45,790 : INFO : Machine : Platform: linux
+2026-06-02 10:48:45,790 : INFO : Machine : Python executable location: /home/rouanet/mpf/.venv/bin/python3.14
+2026-06-02 10:48:45,790 : INFO : Machine : Python version: 3.14.5 (64-bit)
+2026-06-02 10:48:45,791 : INFO : Machine : Initializing MPF...
+2026-06-02 10:48:45,836 : INFO : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2026-06-02 10:48:45,847 : INFO : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 0.5, 'prev_value': None, 'change': True}
+2026-06-02 10:48:45,847 : INFO : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'Mission Pinball Framework v0.80.0', 'prev_value': None, 'change': True}
+2026-06-02 10:48:45,847 : INFO : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'Mission Pinball Framework v0.80.0, Config version:6, Show version: 6, BCP version:1.1', 'prev_value': None, 'change': True}
+2026-06-02 10:48:45,847 : INFO : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.14.5', 'prev_value': None, 'change': True}
+2026-06-02 10:48:45,849 : INFO : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'Linux-6.18.7-76061807-generic-x86_64-with-glibc2.39', 'prev_value': None, 'change': True}
+2026-06-02 10:48:45,849 : INFO : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Linux', 'prev_value': None, 'change': True}
+2026-06-02 10:48:45,849 : INFO : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '6.18.7-76061807-generic', 'prev_value': None, 'change': True}
+2026-06-02 10:48:45,849 : INFO : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': '#202601231045~1778249322~24.04~b44a3c3 SMP PREEMPT_DYNAMIC Fri M', 'prev_value': None, 'change': True}
+2026-06-02 10:48:45,849 : INFO : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'x86_64', 'prev_value': None, 'change': True}
+2026-06-02 10:48:45,849 : INFO : EventManager : Event: ======'machine_var_log_file_path'====== Args={'value': '/home/rouanet/Documents/SimpsonsMpf/logs/2026-06-02-10-48-45-mpf-pop-os.log', 'prev_value': None, 'change': True}
+2026-06-02 10:48:45,849 : INFO : EventManager : Event: ======'init_phase_1'====== Args={}
+2026-06-02 10:48:45,855 : ERROR : asyncio : Exception in callback EventManager._async_handler_done()() at /home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/core/events.py:124
+handle: <Handle EventManager._async_handler_done()() at /home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/core/events.py:124>
+Traceback (most recent call last):
+  File "/home/rouanet/.pyenv/versions/3.14.5/lib/python3.14/asyncio/events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/core/events.py", line 127, in _async_handler_done
+    future.result()
+    ~~~~~~~~~~~~~^^
+  File "/home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/core/device_manager.py", line 83, in _load_device_modules
+    self.create_devices(collection_name, config)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/core/device_manager.py", line 119, in create_devices
+    self.raise_config_error("Device {}:'{}' has an empty config.".format(collection_name, device_name), 2,
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            context=collection_name + "." + device_name)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/core/logging.py", line 175, in raise_config_error
+    raise ConfigFileError(msg, error_no, self.log.name if self.log else "", context, self._url_base) \
+        from source_exception
+mpf.exceptions.config_file_error.ConfigFileError: Config File Error in DeviceManager: Device switches:'s_right_eos' has an empty config. Context: switches.s_right_eos Error Code: CFE-DeviceManager-2 (https://missionpinball.org/latest/logs)
+2026-06-02 10:48:45,857 : INFO : Machine : Starting the main run loop with active modes: []
+2026-06-02 10:48:45,857 : WARNING : Machine : Attract mode is not active, game will not be playable. Please check your attract mode configuration.
+2026-06-02 10:48:45,857 : INFO : Machine : Shutting down...
+2026-06-02 10:48:45,858 : INFO : EventManager : Event: ======'shutdown'====== Args={}
+2026-06-02 10:48:46,859 : ERROR : Machine : Runtime Exception
+Traceback (most recent call last):
+  File "/home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/core/machine.py", line 810, in _run_loop
+    raise self._exception['exception']
+  File "/home/rouanet/.pyenv/versions/3.14.5/lib/python3.14/asyncio/events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/core/events.py", line 127, in _async_handler_done
+    future.result()
+    ~~~~~~~~~~~~~^^
+  File "/home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/core/device_manager.py", line 83, in _load_device_modules
+    self.create_devices(collection_name, config)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/core/device_manager.py", line 119, in create_devices
+    self.raise_config_error("Device {}:'{}' has an empty config.".format(collection_name, device_name), 2,
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            context=collection_name + "." + device_name)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/core/logging.py", line 175, in raise_config_error
+    raise ConfigFileError(msg, error_no, self.log.name if self.log else "", context, self._url_base) \
+        from source_exception
+mpf.exceptions.config_file_error.ConfigFileError: Config File Error in DeviceManager: Device switches:'s_right_eos' has an empty config. Context: switches.s_right_eos Error Code: CFE-DeviceManager-2 (https://missionpinball.org/latest/logs)
+2026-06-02 10:48:46,861 : INFO : root : MPF run loop ended.

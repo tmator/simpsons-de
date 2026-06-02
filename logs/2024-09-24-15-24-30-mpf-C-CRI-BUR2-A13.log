@@ -1,0 +1,51 @@
+2024-09-24 15:24:30,064 : INFO : root : Loading config.
+2024-09-24 15:24:30,127 : INFO : ConfigProcessor : Config spec file cache created: C:\Users\BRICE~1.ROU\AppData\Local\Temp\config_spec.mpf_cache
+2024-09-24 15:24:30,128 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2024-09-24 15:24:30,128 : INFO : ConfigProcessor : Loading config from file C:\Users\brice.rouanet\Documents\mpf\mpf\mpfconfig.yaml.
+2024-09-24 15:24:30,150 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\mpf\mpf\mpfconfig.yaml
+2024-09-24 15:24:30,152 : INFO : ConfigProcessor : Loading config from file C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\config.yaml.
+2024-09-24 15:24:30,152 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\config.yaml
+2024-09-24 15:24:30,157 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\switches.yaml
+2024-09-24 15:24:30,159 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\coils.yaml
+2024-09-24 15:24:30,165 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\lamps.yaml
+2024-09-24 15:24:30,166 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\vars.yaml
+2024-09-24 15:24:30,168 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\targets.yaml
+2024-09-24 15:24:30,170 : INFO : ConfigProcessor : Config file cache created: C:\Users\BRICE~1.ROU\AppData\Local\Temp\b9449346bad62f22816218c6c6e0e20e.mpf_cache
+2024-09-24 15:24:30,916 : INFO : ConfigProcessor : Loading config from file C:\Users\brice.rouanet\Documents\mpf\mpf\modes\attract\config\attract.yaml.
+2024-09-24 15:24:30,923 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\mpf\mpf\modes\attract\config\attract.yaml
+2024-09-24 15:24:30,924 : INFO : ConfigProcessor : Config file cache created: C:\Users\BRICE~1.ROU\AppData\Local\Temp\d71cc0065cf3b986b341b4b3acf7151b.mpf_cache
+2024-09-24 15:24:30,925 : INFO : ConfigProcessor : Loading config from file C:\Users\brice.rouanet\Documents\mpf\mpf\modes\game\config\game.yaml.
+2024-09-24 15:24:30,933 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\mpf\mpf\modes\game\config\game.yaml
+2024-09-24 15:24:30,934 : INFO : ConfigProcessor : Config file cache created: C:\Users\BRICE~1.ROU\AppData\Local\Temp\08ed8ef6bbf541ff70cecc6b77fe1bdf.mpf_cache
+2024-09-24 15:24:30,935 : INFO : ConfigProcessor : Loading config from cache: C:\Users\BRICE~1.ROU\AppData\Local\Temp\d71cc0065cf3b986b341b4b3acf7151b.mpf_cache
+2024-09-24 15:24:30,943 : INFO : Machine : Mission Pinball Framework Core Engine v0.80.0.dev4
+2024-09-24 15:24:30,943 : INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': False, 'configfile': ['config.yaml'], 'force_assets_load': False, 'platform_integration_test': False, 'jsonlogging': False, 'logfile': 'logs\\2024-09-24-15-24-30-mpf-C-CRI-BUR2-A13.log', 'pause': False, 'production': False, 'text_ui': False, 'loglevel': 15, 'consoleloglevel': 20, 'force_platform': None, 'syslog_address': None, 'full_logfile_path': 'C:\\Users\\brice.rouanet\\Documents\\GitHub\\SimpsonsMpf\\logs\\2024-09-24-15-24-30-mpf-C-CRI-BUR2-A13.log'}
+2024-09-24 15:24:30,943 : INFO : Machine : MPF path: C:\Users\brice.rouanet\Documents\mpf\mpf
+2024-09-24 15:24:30,943 : INFO : Machine : Machine path: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf
+2024-09-24 15:24:30,943 : INFO : Machine : Platform: win32
+2024-09-24 15:24:30,943 : INFO : Machine : Python executable location: C:\Users\brice.rouanet\Documents\mpfenv\Scripts\python.exe
+2024-09-24 15:24:30,943 : INFO : Machine : Python version: 3.11.9 (64-bit)
+2024-09-24 15:24:30,946 : INFO : Machine : Initializing MPF...
+2024-09-24 15:24:30,947 : ERROR : ConfigValidator : Your config contains a value for the setting "hardware:connection", but this is not a valid setting name.
+2024-09-24 15:24:30,948 : ERROR : Machine : Failed to initialize MPF
+Traceback (most recent call last):
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\core\machine.py", line 686, in initialize_mpf
+    raise init.exception()
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\core\machine.py", line 248, in initialize
+    await self.initialize_core_and_hardware()
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\core\machine.py", line 234, in initialize_core_and_hardware
+    self._load_hardware_platforms()
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\core\machine.py", line 473, in _load_hardware_platforms
+    self.validate_machine_config_section('hardware')
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\core\machine.py", line 391, in validate_machine_config_section
+    self.config[section] = self.config_validator.validate_config(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\core\config_validator.py", line 164, in validate_config
+    return self._validate_config(config_spec, source, base_spec=base_spec, add_missing_keys=add_missing_keys,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\core\config_validator.py", line 177, in _validate_config
+    self.check_for_invalid_sections(this_spec, source, validation_failure_info)
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\core\config_validator.py", line 345, in check_for_invalid_sections
+    raise ConfigFileError('Your config contains a value for the '
+mpf.exceptions.config_file_error.ConfigFileError: Config File Error in ConfigValidator: Your config contains a value for the setting "hardware:connection", but this is not a valid setting name. Error Code: CFE-ConfigValidator-2 (https://missionpinball.org/logs)
+2024-09-24 15:24:30,975 : INFO : root : MPF run loop ended.

@@ -1,0 +1,102 @@
+2024-09-24 15:35:57,406 : INFO : root : Loading config.
+2024-09-24 15:35:57,412 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2024-09-24 15:35:57,413 : WARNING : ConfigProcessor : Config file in cache changed: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\config.yaml
+2024-09-24 15:35:57,413 : INFO : ConfigProcessor : Loading config from file C:\Users\brice.rouanet\Documents\mpf\mpf\mpfconfig.yaml.
+2024-09-24 15:35:57,428 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\mpf\mpf\mpfconfig.yaml
+2024-09-24 15:35:57,429 : INFO : ConfigProcessor : Loading config from file C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\config.yaml.
+2024-09-24 15:35:57,439 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\config.yaml
+2024-09-24 15:35:57,443 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\switches.yaml
+2024-09-24 15:35:57,445 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\coils.yaml
+2024-09-24 15:35:57,451 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\lamps.yaml
+2024-09-24 15:35:57,453 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\targets.yaml
+2024-09-24 15:35:57,455 : INFO : ConfigProcessor : Config file cache created: C:\Users\BRICE~1.ROU\AppData\Local\Temp\b9449346bad62f22816218c6c6e0e20e.mpf_cache
+2024-09-24 15:35:57,531 : INFO : ConfigProcessor : Loading config from cache: C:\Users\BRICE~1.ROU\AppData\Local\Temp\d71cc0065cf3b986b341b4b3acf7151b.mpf_cache
+2024-09-24 15:35:57,533 : INFO : ConfigProcessor : Loading config from cache: C:\Users\BRICE~1.ROU\AppData\Local\Temp\08ed8ef6bbf541ff70cecc6b77fe1bdf.mpf_cache
+2024-09-24 15:35:57,534 : INFO : Machine : Mission Pinball Framework Core Engine v0.80.0.dev4
+2024-09-24 15:35:57,534 : INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': False, 'configfile': ['config.yaml'], 'force_assets_load': False, 'platform_integration_test': False, 'jsonlogging': False, 'logfile': 'logs\\2024-09-24-15-35-57-mpf-C-CRI-BUR2-A13.log', 'pause': False, 'production': False, 'text_ui': False, 'loglevel': 15, 'consoleloglevel': 20, 'force_platform': None, 'syslog_address': None, 'full_logfile_path': 'C:\\Users\\brice.rouanet\\Documents\\GitHub\\SimpsonsMpf\\logs\\2024-09-24-15-35-57-mpf-C-CRI-BUR2-A13.log'}
+2024-09-24 15:35:57,534 : INFO : Machine : MPF path: C:\Users\brice.rouanet\Documents\mpf\mpf
+2024-09-24 15:35:57,534 : INFO : Machine : Machine path: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf
+2024-09-24 15:35:57,534 : INFO : Machine : Platform: win32
+2024-09-24 15:35:57,534 : INFO : Machine : Python executable location: C:\Users\brice.rouanet\Documents\mpfenv\Scripts\python.exe
+2024-09-24 15:35:57,534 : INFO : Machine : Python version: 3.11.9 (64-bit)
+2024-09-24 15:35:57,536 : INFO : Machine : Initializing MPF...
+2024-09-24 15:35:57,621 : INFO : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,640 : INFO : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 0.5, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,640 : INFO : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'Mission Pinball Framework v0.80.0.dev4', 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,640 : INFO : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'Mission Pinball Framework v0.80.0.dev4, Config version:6, Show version: 6, BCP version:1.1', 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,640 : INFO : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.11.9', 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,677 : INFO : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'Windows-10-10.0.26100-SP0', 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,677 : INFO : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Windows', 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,677 : INFO : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '10', 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,677 : INFO : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': '10.0.26100', 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,677 : INFO : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'AMD64', 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,677 : INFO : EventManager : Event: ======'machine_var_log_file_path'====== Args={'value': 'C:\\Users\\brice.rouanet\\Documents\\GitHub\\SimpsonsMpf\\logs\\2024-09-24-15-35-57-mpf-C-CRI-BUR2-A13.log', 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,677 : INFO : EventManager : Event: ======'init_phase_1'====== Args={}
+2024-09-24 15:35:57,708 : INFO : EventManager : Event: ======'drop_target_bank_bowling_drop_targets_up'====== Args={}
+2024-09-24 15:35:57,708 : INFO : EventManager : Event: ======'drop_target_bank_slingshot_drop_targets_up'====== Args={}
+2024-09-24 15:35:57,709 : INFO : EventManager : Event: ======'init_phase_2'====== Args={}
+2024-09-24 15:35:57,716 : INFO : EventManager : Event: ======'init_phase_3'====== Args={}
+2024-09-24 15:35:57,717 : INFO : EventManager : Event: ======'init_phase_4'====== Args={}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_center_lock_top'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_sling3'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_lock'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_spinner'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_shooter_lane'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_center_bumper'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_outlane'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_sling1'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_eos'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_multiball_start'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_bowling1'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough2'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_return'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_plumb_tilt'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_ramp_entrance'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_donut'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_eos'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_center_donut'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_outhole'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_bowling2'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,719 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_bowling3'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_ramp_exit'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_sling4'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_sling2'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_chocolate'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_bumper'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_center_lock_bottom'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_sling5'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_lock'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_donut'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_slingshot'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_chocolate2'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_coin'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough3'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_credit_button'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_center_coin'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough1'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_slingshot'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_return'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_chocolate3'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_outlane'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_bumper'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_coin'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_slam_tilt'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_events_game_started'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_events_game_ended'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,720 : INFO : EventManager : Event: ======'machine_var_audits_player_score'====== Args={'value': {'top': [], 'average': 0, 'total': 0}, 'prev_value': None, 'change': True}
+2024-09-24 15:35:57,721 : INFO : EventManager : Event: ======'init_phase_5'====== Args={}
+2024-09-24 15:35:57,721 : INFO : EventManager : Event: ======'init_done'====== Args={}
+2024-09-24 15:35:57,721 : INFO : EventManager : Event: ======'machine_reset_phase_1'====== Args={}
+2024-09-24 15:35:57,721 : INFO : EventManager : Event: ======'machine_reset_phase_2'====== Args={}
+2024-09-24 15:35:57,721 : INFO : EventManager : Event: ======'machine_reset_phase_3'====== Args={}
+2024-09-24 15:35:57,722 : INFO : EventManager : Event: ======'reset_complete'====== Args={}
+2024-09-24 15:35:57,722 : INFO : EventManager : Event: ======'mode_attract_will_start'====== Args={}
+2024-09-24 15:35:57,722 : INFO : EventManager : Event: ======'mode_attract_starting'====== Args={}
+2024-09-24 15:35:57,722 : INFO : Mode.attract : Started. Priority: 10
+2024-09-24 15:35:57,722 : INFO : EventManager : Event: ======'modes_active_modes_changed'====== Args={}
+2024-09-24 15:35:57,722 : INFO : EventManager : Event: ======'mode_attract_started'====== Args={}
+2024-09-24 15:35:57,722 : INFO : EventManager : Event: ======'collecting_balls_complete'====== Args={}
+2024-09-24 15:35:57,723 : INFO : Machine : Starting the main run loop with active modes: [<Mode.attract>]
+2024-09-24 15:36:17,646 : INFO : Machine : Shutting down...
+2024-09-24 15:36:17,646 : INFO : EventManager : Event: ======'shutdown'====== Args={}
+2024-09-24 15:36:17,648 : INFO : root : MPF run loop ended.

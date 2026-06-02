@@ -1,0 +1,196 @@
+2024-09-24 16:16:46,501 : INFO : root : Loading config.
+2024-09-24 16:16:46,507 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2024-09-24 16:16:46,507 : INFO : ConfigProcessor : Loading config from cache: C:\Users\BRICE~1.ROU\AppData\Local\Temp\b9449346bad62f22816218c6c6e0e20e.mpf_cache
+2024-09-24 16:16:46,590 : WARNING : ConfigProcessor : Config file in cache changed: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\modes\attract\config\attract.yaml
+2024-09-24 16:16:46,590 : INFO : ConfigProcessor : Loading config from file C:\Users\brice.rouanet\Documents\mpf\mpf\modes\attract\config\attract.yaml.
+2024-09-24 16:16:46,593 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\mpf\mpf\modes\attract\config\attract.yaml
+2024-09-24 16:16:46,593 : INFO : ConfigProcessor : Loading config from file C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\modes\attract\config\attract.yaml.
+2024-09-24 16:16:46,594 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\modes\attract\config\attract.yaml
+2024-09-24 16:16:46,594 : INFO : ConfigProcessor : Config file cache created: C:\Users\BRICE~1.ROU\AppData\Local\Temp\7bb3f77b9c84e7c8eb8a77f60c34b587.mpf_cache
+2024-09-24 16:16:46,596 : INFO : ConfigProcessor : Loading config from cache: C:\Users\BRICE~1.ROU\AppData\Local\Temp\08ed8ef6bbf541ff70cecc6b77fe1bdf.mpf_cache
+2024-09-24 16:16:46,597 : INFO : ConfigProcessor : Loading config from cache: C:\Users\BRICE~1.ROU\AppData\Local\Temp\7bb3f77b9c84e7c8eb8a77f60c34b587.mpf_cache
+2024-09-24 16:16:46,599 : INFO : ConfigProcessor : Loading config from cache: C:\Users\BRICE~1.ROU\AppData\Local\Temp\793ef1f1a7d186094e1de8c7a90a61d9.mpf_cache
+2024-09-24 16:16:46,600 : INFO : Machine : Mission Pinball Framework Core Engine v0.80.0.dev4
+2024-09-24 16:16:46,600 : INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': True, 'configfile': ['config.yaml'], 'force_assets_load': False, 'platform_integration_test': False, 'jsonlogging': False, 'logfile': 'logs\\2024-09-24-16-16-46-mpf-C-CRI-BUR2-A13.log', 'pause': False, 'production': False, 'text_ui': False, 'loglevel': 15, 'consoleloglevel': 20, 'force_platform': 'virtual', 'syslog_address': None, 'full_logfile_path': 'C:\\Users\\brice.rouanet\\Documents\\GitHub\\SimpsonsMpf\\logs\\2024-09-24-16-16-46-mpf-C-CRI-BUR2-A13.log'}
+2024-09-24 16:16:46,600 : INFO : Machine : MPF path: C:\Users\brice.rouanet\Documents\mpf\mpf
+2024-09-24 16:16:46,600 : INFO : Machine : Machine path: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf
+2024-09-24 16:16:46,600 : INFO : Machine : Platform: win32
+2024-09-24 16:16:46,600 : INFO : Machine : Python executable location: C:\Users\brice.rouanet\Documents\mpfenv\Scripts\python.exe
+2024-09-24 16:16:46,600 : INFO : Machine : Python version: 3.11.9 (64-bit)
+2024-09-24 16:16:46,603 : INFO : Machine : Initializing MPF...
+2024-09-24 16:16:46,668 : INFO : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2024-09-24 16:16:46,686 : INFO : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 0.5, 'prev_value': None, 'change': True}
+2024-09-24 16:16:46,686 : INFO : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'Mission Pinball Framework v0.80.0.dev4', 'prev_value': None, 'change': True}
+2024-09-24 16:16:46,686 : INFO : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'Mission Pinball Framework v0.80.0.dev4, Config version:6, Show version: 6, BCP version:1.1', 'prev_value': None, 'change': True}
+2024-09-24 16:16:46,687 : INFO : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.11.9', 'prev_value': None, 'change': True}
+2024-09-24 16:16:46,722 : INFO : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'Windows-10-10.0.26100-SP0', 'prev_value': None, 'change': True}
+2024-09-24 16:16:46,723 : INFO : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Windows', 'prev_value': None, 'change': True}
+2024-09-24 16:16:46,723 : INFO : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '10', 'prev_value': None, 'change': True}
+2024-09-24 16:16:46,723 : INFO : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': '10.0.26100', 'prev_value': None, 'change': True}
+2024-09-24 16:16:46,723 : INFO : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'AMD64', 'prev_value': None, 'change': True}
+2024-09-24 16:16:46,723 : INFO : EventManager : Event: ======'machine_var_log_file_path'====== Args={'value': 'C:\\Users\\brice.rouanet\\Documents\\GitHub\\SimpsonsMpf\\logs\\2024-09-24-16-16-46-mpf-C-CRI-BUR2-A13.log', 'prev_value': None, 'change': True}
+2024-09-24 16:16:46,723 : INFO : EventManager : Event: ======'init_phase_1'====== Args={}
+2024-09-24 16:16:46,765 : INFO : EventManager : Event: ======'drop_target_bank_bowling_drop_targets_up'====== Args={}
+2024-09-24 16:16:46,766 : INFO : EventManager : Event: ======'drop_target_bank_slingshot_drop_targets_up'====== Args={}
+2024-09-24 16:16:46,766 : INFO : EventManager : Event: ======'init_phase_2'====== Args={}
+2024-09-24 16:16:46,766 : INFO : SwitchController : Found active switch: ('11', <Platform.Virtual>) <switch.s_trough1>
+2024-09-24 16:16:46,767 : INFO : SwitchController : Found active switch: ('12', <Platform.Virtual>) <switch.s_trough2>
+2024-09-24 16:16:46,767 : INFO : SwitchController : Found active switch: ('13', <Platform.Virtual>) <switch.s_trough3>
+2024-09-24 16:16:46,769 : INFO : EventManager : Event: ======'bcp_connection_attempt'====== Args={'name': 'local_display', 'host': 'localhost', 'port': 5050}
+2024-09-24 16:16:46,771 : INFO : BCPClientSocket : Connecting BCP to 'local_display' at localhost:5050...
+2024-09-24 16:16:52,529 : INFO : BCPClientSocket : Connected BCP to 'local_display' localhost:5050
+2024-09-24 16:16:52,530 : INFO : EventManager : Event: ======'bcp_clients_connected'====== Args={}
+2024-09-24 16:16:52,530 : INFO : ball_device.bd_plung : BCH: Initial count: 3
+2024-09-24 16:16:52,531 : INFO : ball_device.bd_plung : State: idle
+2024-09-24 16:16:52,531 : INFO : ball_device.bd_drain : BCH: Initial count: 0
+2024-09-24 16:16:52,531 : INFO : ball_device.bd_drain : State: idle
+2024-09-24 16:16:52,538 : INFO : EventManager : Event: ======'init_phase_3'====== Args={}
+2024-09-24 16:16:52,540 : INFO : EventManager : Event: ======'init_phase_4'====== Args={}
+2024-09-24 16:16:52,540 : INFO : BallController : Initial balls found: 3
+2024-09-24 16:16:52,541 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_center_lock_top'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,542 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_shooter_lane'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,542 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_eos'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,542 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_center_coin'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,542 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_bumper'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,542 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_multiball_start'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,542 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_chocolate2'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,542 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_slam_tilt'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,542 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_credit_button'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,542 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_center_bumper'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,542 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_center_lock_bottom'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,542 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_sling5'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,542 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_eos'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,542 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough2'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,542 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_lock'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_return'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_sling3'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_return'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_ramp_entrance'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_bowling2'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_outlane'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_sling1'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_donut'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough1'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough3'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_sling2'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_bowling1'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_chocolate3'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_plumb_tilt'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_coin'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_bumper'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_coin'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,543 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_slingshot'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,544 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_chocolate'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,544 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_bowling3'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,544 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_spinner'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,544 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_sling4'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,544 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_ramp_exit'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,544 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_donut'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,544 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_outhole'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,544 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_outlane'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,544 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_right_slingshot'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,544 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_left_lock'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,544 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_center_donut'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,544 : INFO : EventManager : Event: ======'machine_var_audits_events_game_started'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,544 : INFO : EventManager : Event: ======'machine_var_audits_events_game_ended'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,544 : INFO : EventManager : Event: ======'machine_var_audits_player_score'====== Args={'value': {'top': [], 'average': 0, 'total': 0}, 'prev_value': None, 'change': True}
+2024-09-24 16:16:52,545 : INFO : EventManager : Event: ======'init_phase_5'====== Args={}
+2024-09-24 16:16:52,545 : INFO : EventManager : Event: ======'init_done'====== Args={}
+2024-09-24 16:16:52,545 : INFO : EventManager : Event: ======'machine_reset_phase_1'====== Args={}
+2024-09-24 16:16:52,556 : INFO : EventManager : Event: ======'machine_reset_phase_2'====== Args={}
+2024-09-24 16:16:52,557 : INFO : EventManager : Event: ======'machine_reset_phase_3'====== Args={}
+2024-09-24 16:16:52,557 : INFO : EventManager : Event: ======'reset_complete'====== Args={}
+2024-09-24 16:16:52,557 : INFO : EventManager : Event: ======'mode_attract_will_start'====== Args={}
+2024-09-24 16:16:52,558 : INFO : EventManager : Event: ======'mode_attract_starting'====== Args={}
+2024-09-24 16:16:52,558 : INFO : Mode.attract : Started. Priority: 10
+2024-09-24 16:16:52,558 : INFO : EventManager : Event: ======'modes_active_modes_changed'====== Args={}
+2024-09-24 16:16:52,558 : INFO : EventManager : Event: ======'mode_attract_started'====== Args={}
+2024-09-24 16:16:52,558 : INFO : EventManager : Event: ======'collecting_balls_complete'====== Args={}
+2024-09-24 16:16:52,559 : INFO : Machine : Starting the main run loop with active modes: [<Mode.attract>]
+2024-09-24 16:17:06,288 : INFO : SwitchController : <<<<<<< 's_credit_button' active >>>>>>>
+2024-09-24 16:17:06,370 : INFO : SwitchController : <<<<<<< 's_credit_button' inactive >>>>>>>
+2024-09-24 16:17:06,371 : INFO : EventManager : Event: ======'request_to_start_game'====== Args={}
+2024-09-24 16:17:06,371 : INFO : EventManager : Event: ======'game_start'====== Args={'buttons': [], 'hold_time': 0.07899999999972351}
+2024-09-24 16:17:06,371 : INFO : EventManager : Event: ======'mode_game_will_start'====== Args={'buttons': [], 'hold_time': 0.07899999999972351}
+2024-09-24 16:17:06,372 : INFO : EventManager : Event: ======'mode_game_starting'====== Args={'buttons': [], 'hold_time': 0.07899999999972351}
+2024-09-24 16:17:06,372 : INFO : EventManager : Event: ======'mode_attract_will_stop'====== Args={}
+2024-09-24 16:17:06,372 : INFO : EventManager : Event: ======'mode_attract_stopping'====== Args={}
+2024-09-24 16:17:06,372 : INFO : Mode.attract : Stopped.
+2024-09-24 16:17:06,372 : INFO : EventManager : Event: ======'modes_active_modes_changed'====== Args={}
+2024-09-24 16:17:06,372 : INFO : EventManager : Event: ======'mode_attract_stopped'====== Args={}
+2024-09-24 16:17:06,372 : INFO : EventManager : Event: ======'clear'====== Args={'key': 'attract'}
+2024-09-24 16:17:06,373 : INFO : Mode.game : Started. Priority: 20
+2024-09-24 16:17:06,373 : INFO : EventManager : Event: ======'modes_active_modes_changed'====== Args={}
+2024-09-24 16:17:06,373 : INFO : EventManager : Event: ======'mode_game_started'====== Args={'buttons': [], 'hold_time': 0.07899999999972351}
+2024-09-24 16:17:06,373 : INFO : EventManager : Event: ======'game_will_start'====== Args={}
+2024-09-24 16:17:06,374 : INFO : EventManager : Event: ======'game_starting'====== Args={'game': <Mode.game>}
+2024-09-24 16:17:06,374 : INFO : EventManager : Unordered handler for class <Auditor> on event game_ended with priority 1. Handlers: [RegisteredHandler(callback=<bound method Auditor.disable of <Auditor>>, priority=1, kwargs={}, key=UUID('61033e6a-5cf4-48a3-85a5-31819b93c0f6'), condition=None, blocking_facility=None), RegisteredHandler(callback=<bound method Auditor._save_audits of <Auditor>>, priority=1, kwargs={}, key=UUID('65b751ba-56f7-4967-bc96-133f7c6dfba5'), condition=None, blocking_facility=None)]. The order of those handlers is not defined and they will be executed in random order. This might lead to race conditions and potential bugs.
+2024-09-24 16:17:06,374 : INFO : EventManager : Event: ======'player_add_request'====== Args={}
+2024-09-24 16:17:06,374 : INFO : EventManager : Event: ======'player_will_add'====== Args={'number': 1}
+2024-09-24 16:17:06,374 : INFO : EventManager : Event: ======'player_adding'====== Args={'player': <Player 1>, 'number': 1}
+2024-09-24 16:17:06,374 : INFO : EventManager : Event: ======'player_added'====== Args={'player': <Player 1>, 'num': 1}
+2024-09-24 16:17:06,374 : INFO : Mode.game : Player added successfully. Total players: 1
+2024-09-24 16:17:06,375 : INFO : EventManager : Event: ======'player_index'====== Args={'value': 0, 'prev_value': 0, 'change': 0, 'player_num': 1}
+2024-09-24 16:17:06,375 : INFO : EventManager : Event: ======'player_number'====== Args={'value': 1, 'prev_value': 1, 'change': 0, 'player_num': 1}
+2024-09-24 16:17:06,375 : INFO : EventManager : Event: ======'player_score'====== Args={'value': 0, 'prev_value': 0, 'change': 0, 'player_num': 1}
+2024-09-24 16:17:06,375 : INFO : EventManager : Event: ======'game_started'====== Args={}
+2024-09-24 16:17:06,376 : INFO : EventManager : Event: ======'player_turn_will_start'====== Args={'player': <Player 1>, 'number': 1}
+2024-09-24 16:17:06,376 : INFO : EventManager : Event: ======'player_turn_starting'====== Args={'player': <Player 1>, 'number': 1}
+2024-09-24 16:17:06,376 : INFO : EventManager : Event: ======'player_ball'====== Args={'value': 1, 'prev_value': 0, 'change': 1, 'player_num': 1}
+2024-09-24 16:17:06,376 : INFO : EventManager : Event: ======'player_turn_started'====== Args={'player': <Player 1>, 'number': 1}
+2024-09-24 16:17:06,377 : INFO : EventManager : Event: ======'ball_will_start'====== Args={'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2024-09-24 16:17:06,377 : INFO : EventManager : Event: ======'ball_starting'====== Args={'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2024-09-24 16:17:06,377 : INFO : drop_target_bank.bowling_drop_targets : All targets are already up. Will not reset bank.
+2024-09-24 16:17:06,377 : INFO : drop_target_bank.slingshot_drop_targets : All targets are already up. Will not reset bank.
+2024-09-24 16:17:06,378 : INFO : EventManager : Event: ======'balls_in_play'====== Args={'balls': 1}
+2024-09-24 16:17:06,378 : INFO : EventManager : Event: ======'ball_started'====== Args={'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2024-09-24 16:17:06,378 : INFO : EventManager : Event: ======'mode_base_will_start'====== Args={'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2024-09-24 16:17:06,383 : INFO : EventManager : Event: ======'mode_base_starting'====== Args={'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2024-09-24 16:17:06,383 : INFO : Mode.base : Started. Priority: 100
+2024-09-24 16:17:06,383 : INFO : EventManager : Event: ======'modes_active_modes_changed'====== Args={}
+2024-09-24 16:17:06,383 : INFO : EventManager : Event: ======'mode_base_started'====== Args={'player': 1, 'ball': 1, 'balls_remaining': 2, 'is_extra_ball': False}
+2024-09-24 16:17:06,384 : INFO : EventManager : Event: ======'single_player_ball_started'====== Args={}
+2024-09-24 16:17:06,384 : INFO : EventManager : Event: ======'ball_start_target'====== Args={'target': 'playfield'}
+2024-09-24 16:17:06,384 : ERROR : asyncio : Exception in callback AsyncMode._mode_ended(<Task finishe... playfield?')>)
+handle: <Handle AsyncMode._mode_ended(<Task finishe... playfield?')>)>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\core\async_mode.py", line 48, in _mode_ended
+    future.result()
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\modes\game\code\game.py", line 91, in _run
+    await self._run_ball()
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\modes\game\code\game.py", line 108, in _run_ball
+    await self._start_ball(is_extra_ball)
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\modes\game\code\game.py", line 402, in _start_ball
+    self.machine.playfields[result["target"]].add_ball(player_controlled=True)
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\devices\playfield.py", line 237, in add_ball
+    self.raise_config_error("Missing a source device to request a ball. Did you define a default_source_device "
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\core\logging.py", line 174, in raise_config_error
+    raise ConfigFileError(msg, error_no, self.log.name if self.log else "", context, self._url_base) \
+mpf.exceptions.config_file_error.ConfigFileError: Config File Error in playfield.playfield: Missing a source device to request a ball. Did you define a default_source_device in your playfield? Error Code: CFE-playfield-1 (https://missionpinball.org/logs)
+2024-09-24 16:17:06,441 : INFO : EventManager : Event: ======'slide__removed'====== Args={'_from_bcp': True}
+2024-09-24 16:17:06,441 : INFO : EventManager : Event: ======'slide_base_created'====== Args={'_from_bcp': True}
+2024-09-24 16:17:06,441 : INFO : EventManager : Event: ======'slide_base_active'====== Args={'original_context': 'base', 'original_calling_context': 'mode_base_started', 'priority': 100.0, 'player': 1.0, 'ball': 1.0, 'balls_remaining': 2.0, 'is_extra_ball': False, 'cmd': 'slides_play', '_from_bcp': True}
+2024-09-24 16:17:06,441 : INFO : Machine : Shutting down...
+2024-09-24 16:17:06,441 : INFO : EventManager : Event: ======'shutdown'====== Args={}
+2024-09-24 16:17:06,444 : ERROR : Machine : Runtime Exception
+Traceback (most recent call last):
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\core\machine.py", line 808, in _run_loop
+    raise self._exception['exception']
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\core\async_mode.py", line 48, in _mode_ended
+    future.result()
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\modes\game\code\game.py", line 91, in _run
+    await self._run_ball()
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\modes\game\code\game.py", line 108, in _run_ball
+    await self._start_ball(is_extra_ball)
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\modes\game\code\game.py", line 402, in _start_ball
+    self.machine.playfields[result["target"]].add_ball(player_controlled=True)
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\devices\playfield.py", line 237, in add_ball
+    self.raise_config_error("Missing a source device to request a ball. Did you define a default_source_device "
+  File "C:\Users\brice.rouanet\Documents\mpf\mpf\core\logging.py", line 174, in raise_config_error
+    raise ConfigFileError(msg, error_no, self.log.name if self.log else "", context, self._url_base) \
+mpf.exceptions.config_file_error.ConfigFileError: Config File Error in playfield.playfield: Missing a source device to request a ball. Did you define a default_source_device in your playfield? Error Code: CFE-playfield-1 (https://missionpinball.org/logs)
+2024-09-24 16:17:06,446 : INFO : root : MPF run loop ended.

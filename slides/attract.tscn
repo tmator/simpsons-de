@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ddcki5aelf0qs"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_5diu2"]
+[ext_resource type="Texture2D" uid="uid://dfyv7ow60mip" path="res://img/fond.png" id="2_58ebb"]
+[ext_resource type="FontFile" uid="uid://0qltmv3kqj23" path="res://fonts/homer.ttf" id="3_p3ykc"]
+
+[node name="Attract" type="Control" unique_id=1531728061]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5diu2")
+
+[node name="Fond" type="Sprite2D" parent="." unique_id=1781291499]
+position = Vector2(960, 540)
+texture = ExtResource("2_58ebb")
+
+[node name="Label" type="Label" parent="." unique_id=1031368331]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 521.0
+offset_right = 1787.0
+offset_bottom = 721.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 7
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("3_p3ykc")
+theme_override_font_sizes/font_size = 200
+text = "PRESS START MAN"

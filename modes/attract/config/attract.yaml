@@ -1,0 +1,12 @@
+#config_version=6
+
+slide_player:
+  mode_attract_started: attract
+
+sound_player:
+ mode_attract_started:
+   intro_music:
+     bus: music
+ mode_attract_stopped:
+  intro_music:
+   action: stop

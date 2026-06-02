@@ -1,0 +1,93 @@
+#config_version=6
+
+switches:
+  s_plumb_tilt:
+   number: 1
+  s_credit_button:
+   number: 3
+   tags: start 
+  s_right_coin:
+   number: 4
+  s_center_coin:
+   number: 5
+  s_left_coin:
+   number: 6
+  s_slam_tilt:
+   number: 7
+  s_outhole:
+   number: 10
+  s_trough1:
+   number: 11
+  s_trough2:
+   number: 12
+  s_trough3:
+   number: 13
+  s_shooter_lane:
+   number: 14
+   tags: playfield_active
+  s_left_eos:
+   number: 15   
+  s_right_eos:
+   number: 16   
+  s_left_outlane:
+   number: 17
+  s_left_return:
+   number: 18
+  s_right_outlane:
+   number: 19
+  s_right_return:
+   number: 20
+  s_left_slingshot:
+   number: 21
+  s_right_slingshot:
+   number: 22
+  s_chocolate:
+   number: 25
+  s_chocolate2:
+   number: 26
+  s_chocolate3:
+   number: 27    
+  s_left_lock:
+   number: 28
+  s_center_lock_bottom:
+   number: 29
+  s_center_lock_top:
+   number: 30
+  s_bowling1:
+   number: 33
+  s_bowling2:
+   number: 34
+  s_bowling3:
+   number: 35
+  s_spinner:
+   number: 36
+  s_right_lock:
+   number: 37
+  s_ramp_entrance:
+   number: 38
+  s_ramp_exit:
+   number: 39
+  s_sling1:
+   number: 41
+  s_sling2:
+   number: 42
+  s_sling3:
+   number: 43
+  s_sling4:
+   number: 44    
+  s_sling5:
+   number: 45
+  s_left_bumper:
+   number: 46
+  s_center_bumper:
+   number: 47
+  s_right_bumper:
+   number: 48
+  s_right_donut:
+   number: 49
+  s_center_donut:
+   number: 50
+  s_left_donut:
+   number: 51
+  s_multiball_start:
+   number: 52

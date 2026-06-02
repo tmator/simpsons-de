@@ -1,0 +1,8 @@
+2026-06-02 12:15:56,174 : INFO : root : Loading config.
+2026-06-02 12:15:56,416 : INFO : ConfigProcessor : Config spec file cache created: /tmp/config_spec.mpf_cache
+2026-06-02 12:15:56,416 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2026-06-02 12:15:56,417 : INFO : ConfigProcessor : Loading config from cache: /tmp/a9f758074c4719bec73a40b7e322c3da.mpf_cache
+2026-06-02 12:15:56,461 : WARNING : ConfigProcessor : Config file in cache changed: /home/rouanet/Documents/SimpsonsMpf/modes/attract/config/attract.yaml
+2026-06-02 12:15:56,461 : INFO : ConfigProcessor : Loading config from file /home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/modes/attract/config/attract.yaml.
+2026-06-02 12:15:56,464 : INFO : ConfigProcessor : Loading config: /home/rouanet/mpf/.venv/lib/python3.14/site-packages/mpf/modes/attract/config/attract.yaml
+2026-06-02 12:15:56,464 : INFO : ConfigProcessor : Loading config from file /home/rouanet/Documents/SimpsonsMpf/modes/attract/config/attract.yaml.

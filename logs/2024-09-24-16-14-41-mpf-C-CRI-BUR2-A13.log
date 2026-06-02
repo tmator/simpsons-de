@@ -1,0 +1,49 @@
+2024-09-24 16:14:41,350 : INFO : root : Loading config.
+2024-09-24 16:14:41,355 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2024-09-24 16:14:41,356 : WARNING : ConfigProcessor : Config file in cache changed: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\config.yaml
+2024-09-24 16:14:41,356 : INFO : ConfigProcessor : Loading config from file C:\Users\brice.rouanet\Documents\mpf\mpf\mpfconfig.yaml.
+2024-09-24 16:14:41,368 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\mpf\mpf\mpfconfig.yaml
+2024-09-24 16:14:41,369 : INFO : ConfigProcessor : Loading config from file C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\config.yaml.
+2024-09-24 16:14:41,380 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\config.yaml
+2024-09-24 16:14:41,383 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\switches.yaml
+2024-09-24 16:14:41,386 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\coils.yaml
+2024-09-24 16:14:41,390 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\lamps.yaml
+2024-09-24 16:14:41,393 : INFO : ConfigProcessor : Loading config: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf\config\targets.yaml
+2024-09-24 16:14:41,395 : INFO : ConfigProcessor : Config file cache created: C:\Users\BRICE~1.ROU\AppData\Local\Temp\b9449346bad62f22816218c6c6e0e20e.mpf_cache
+2024-09-24 16:14:41,469 : INFO : ConfigProcessor : Loading config from cache: C:\Users\BRICE~1.ROU\AppData\Local\Temp\7bb3f77b9c84e7c8eb8a77f60c34b587.mpf_cache
+2024-09-24 16:14:41,470 : INFO : ConfigProcessor : Loading config from cache: C:\Users\BRICE~1.ROU\AppData\Local\Temp\08ed8ef6bbf541ff70cecc6b77fe1bdf.mpf_cache
+2024-09-24 16:14:41,471 : INFO : ConfigProcessor : Loading config from cache: C:\Users\BRICE~1.ROU\AppData\Local\Temp\7bb3f77b9c84e7c8eb8a77f60c34b587.mpf_cache
+2024-09-24 16:14:41,472 : INFO : ConfigProcessor : Loading config from cache: C:\Users\BRICE~1.ROU\AppData\Local\Temp\793ef1f1a7d186094e1de8c7a90a61d9.mpf_cache
+2024-09-24 16:14:41,473 : INFO : Machine : Mission Pinball Framework Core Engine v0.80.0.dev4
+2024-09-24 16:14:41,473 : INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': True, 'configfile': ['config.yaml'], 'force_assets_load': False, 'platform_integration_test': False, 'jsonlogging': False, 'logfile': 'logs\\2024-09-24-16-14-41-mpf-C-CRI-BUR2-A13.log', 'pause': False, 'production': False, 'text_ui': False, 'loglevel': 15, 'consoleloglevel': 20, 'force_platform': 'virtual', 'syslog_address': None, 'full_logfile_path': 'C:\\Users\\brice.rouanet\\Documents\\GitHub\\SimpsonsMpf\\logs\\2024-09-24-16-14-41-mpf-C-CRI-BUR2-A13.log'}
+2024-09-24 16:14:41,474 : INFO : Machine : MPF path: C:\Users\brice.rouanet\Documents\mpf\mpf
+2024-09-24 16:14:41,474 : INFO : Machine : Machine path: C:\Users\brice.rouanet\Documents\GitHub\SimpsonsMpf
+2024-09-24 16:14:41,474 : INFO : Machine : Platform: win32
+2024-09-24 16:14:41,474 : INFO : Machine : Python executable location: C:\Users\brice.rouanet\Documents\mpfenv\Scripts\python.exe
+2024-09-24 16:14:41,474 : INFO : Machine : Python version: 3.11.9 (64-bit)
+2024-09-24 16:14:41,477 : INFO : Machine : Initializing MPF...
+2024-09-24 16:14:41,550 : INFO : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2024-09-24 16:14:41,566 : INFO : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 0.5, 'prev_value': None, 'change': True}
+2024-09-24 16:14:41,566 : INFO : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'Mission Pinball Framework v0.80.0.dev4', 'prev_value': None, 'change': True}
+2024-09-24 16:14:41,566 : INFO : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'Mission Pinball Framework v0.80.0.dev4, Config version:6, Show version: 6, BCP version:1.1', 'prev_value': None, 'change': True}
+2024-09-24 16:14:41,566 : INFO : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.11.9', 'prev_value': None, 'change': True}
+2024-09-24 16:14:41,601 : INFO : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'Windows-10-10.0.26100-SP0', 'prev_value': None, 'change': True}
+2024-09-24 16:14:41,601 : INFO : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Windows', 'prev_value': None, 'change': True}
+2024-09-24 16:14:41,601 : INFO : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '10', 'prev_value': None, 'change': True}
+2024-09-24 16:14:41,601 : INFO : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': '10.0.26100', 'prev_value': None, 'change': True}
+2024-09-24 16:14:41,602 : INFO : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'AMD64', 'prev_value': None, 'change': True}
+2024-09-24 16:14:41,602 : INFO : EventManager : Event: ======'machine_var_log_file_path'====== Args={'value': 'C:\\Users\\brice.rouanet\\Documents\\GitHub\\SimpsonsMpf\\logs\\2024-09-24-16-14-41-mpf-C-CRI-BUR2-A13.log', 'prev_value': None, 'change': True}
+2024-09-24 16:14:41,602 : INFO : EventManager : Event: ======'init_phase_1'====== Args={}
+2024-09-24 16:14:41,632 : INFO : EventManager : Event: ======'drop_target_bank_bowling_drop_targets_up'====== Args={}
+2024-09-24 16:14:41,633 : INFO : EventManager : Event: ======'drop_target_bank_slingshot_drop_targets_up'====== Args={}
+2024-09-24 16:14:41,633 : INFO : EventManager : Event: ======'init_phase_2'====== Args={}
+2024-09-24 16:14:41,633 : INFO : SwitchController : Found active switch: ('11', <Platform.Virtual>) <switch.s_trough1>
+2024-09-24 16:14:41,633 : INFO : SwitchController : Found active switch: ('12', <Platform.Virtual>) <switch.s_trough2>
+2024-09-24 16:14:41,633 : INFO : SwitchController : Found active switch: ('13', <Platform.Virtual>) <switch.s_trough3>
+2024-09-24 16:14:41,636 : INFO : EventManager : Event: ======'bcp_connection_attempt'====== Args={'name': 'local_display', 'host': 'localhost', 'port': 5050}
+2024-09-24 16:14:41,638 : INFO : BCPClientSocket : Connecting BCP to 'local_display' at localhost:5050...
+2024-09-24 16:14:45,863 : INFO : Machine : Starting the main run loop with active modes: []
+2024-09-24 16:14:45,863 : WARNING : Machine : Attract mode is not active, game will not be playable. Please check your attract mode configuration.
+2024-09-24 16:14:45,863 : INFO : Machine : Shutting down...
+2024-09-24 16:14:45,863 : INFO : EventManager : Event: ======'shutdown'====== Args={}
+2024-09-24 16:14:46,872 : INFO : root : MPF run loop ended.

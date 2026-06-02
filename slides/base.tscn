@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci7do8kqe24lv"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_gqrvh"]
+[ext_resource type="Texture2D" uid="uid://dfyv7ow60mip" path="res://img/fond.png" id="2_ojumu"]
+
+[node name="Base" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gqrvh")
+
+[node name="Fond" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_ojumu")
