@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bw7r3j1hvs9yl"]
+
+[ext_resource type="Script" path="res://slides/video_bart_skate.gd" id="1_vbs1"]
+[ext_resource type="Texture2D" uid="uid://dfyv7ow60mip" path="res://img/fond.png" id="2_vbs2"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_vbs3"]
+
+[node name="VideoBartSkate" type="Control" unique_id=2001]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vbs1")
+
+[node name="Fond" type="Sprite2D" parent="." unique_id=2002]
+position = Vector2(960, 540)
+texture = ExtResource("2_vbs2")
+
+[node name="Title" type="Label" parent="." unique_id=2003]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 60.0
+offset_right = 1820.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 100
+text = "BART'S SKATE CHALLENGE!"
+
+[node name="Subtitle" type="Label" parent="." unique_id=2004]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 210.0
+offset_right = 1820.0
+offset_bottom = 290.0
+theme_override_font_sizes/font_size = 46
+text = "Evite les ### rouges!   3 collisions = fin du mode"
+
+[node name="Instructions" type="Label" parent="." unique_id=2005]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 780.0
+offset_right = 1820.0
+offset_bottom = 860.0
+theme_override_font_sizes/font_size = 38
+text = "FLECHES G/D pour changer de voie  |  SHIFT+ESPACE pour sauter"
+
+[node name="Timer" type="Label" parent="." unique_id=2006]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 930.0
+offset_right = 1040.0
+offset_bottom = 1010.0
+theme_override_font_sizes/font_size = 60
+script = ExtResource("3_vbs3")
+variable_name = "video_bart_skate_video_bart_skate_timer_tick"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

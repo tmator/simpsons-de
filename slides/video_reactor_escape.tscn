@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dy6f8t4xwq3nk"]
+
+[ext_resource type="Script" path="res://slides/video_reactor_escape.gd" id="1_vre1"]
+[ext_resource type="Texture2D" uid="uid://dfyv7ow60mip" path="res://img/fond.png" id="2_vre2"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_vre3"]
+
+[node name="VideoReactorEscape" type="Control" unique_id=3001]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vre1")
+
+[node name="Fond" type="Sprite2D" parent="." unique_id=3002]
+position = Vector2(960, 540)
+texture = ExtResource("2_vre2")
+
+[node name="Title" type="Label" parent="." unique_id=3003]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 60.0
+offset_right = 1820.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 110
+text = "REACTOR ESCAPE!"
+
+[node name="Subtitle" type="Label" parent="." unique_id=3004]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 210.0
+offset_right = 1820.0
+offset_bottom = 290.0
+theme_override_font_sizes/font_size = 46
+text = "Suis la fleche!  3 erreurs ou temps ecoule = fin"
+
+[node name="Instructions" type="Label" parent="." unique_id=3005]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 780.0
+offset_right = 1820.0
+offset_bottom = 860.0
+theme_override_font_sizes/font_size = 38
+text = "FLECHES pour choisir la direction de sortie"
+
+[node name="Timer" type="Label" parent="." unique_id=3006]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 930.0
+offset_right = 1040.0
+offset_bottom = 1010.0
+theme_override_font_sizes/font_size = 60
+script = ExtResource("3_vre3")
+variable_name = "video_reactor_escape_video_reactor_escape_timer_tick"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

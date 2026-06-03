@@ -11,6 +11,10 @@ hardware:
 modes:
   - attract
   - base
+  - video_donut_catch
+  - video_bart_skate
+  - video_reactor_escape
+  - video_couch_shuffle
 
 virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3
 

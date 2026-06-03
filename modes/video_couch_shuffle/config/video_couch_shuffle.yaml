@@ -1,0 +1,69 @@
+#config_version=6
+
+# VIDEO MODE : video_couch_shuffle
+# Replacer les personnages sur le canapé dans le bon ordre.
+# Ordre cible : HOMER, MARGE, BART, LISA, MAGGIE
+# Gauche/droite pour déplacer le curseur, action pour sélectionner/échanger.
+# La logique d'état (positions, curseur) est gérée par le code Python.
+# Démarrage debug : shift+d -> event debug_start_video_couch_shuffle
+# (shift+c était déjà pris par s_chocolate3)
+
+mode:
+  start_events: debug_start_video_couch_shuffle
+  stop_events:
+    - stop_video_mode
+    - ball_ending
+  priority: 500
+  code: video_couch_shuffle.VideoCouchShuffle
+
+# Timer de sécurité 60 secondes
+timers:
+  video_couch_shuffle_timer:
+    start_value: 60
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: false
+    control_events:
+      - event: mode_video_couch_shuffle_started
+        action: start
+
+slide_player:
+  mode_video_couch_shuffle_started: video_couch_shuffle
+
+# Bonus score en cas de succès
+variable_player:
+  video_couch_shuffle_success:
+    score: 50000
+  video_couch_shuffle_swap:
+    score: 1000
+
+event_player:
+  mode_video_couch_shuffle_started:
+    - test_video_couch_shuffle_started
+    - gmc_video_mode_start
+    - gmc_video_mode_video_couch_shuffle_start
+
+  mode_video_couch_shuffle_stopped:
+    - gmc_video_mode_stop
+    - test_video_couch_shuffle_stopped
+
+  # Fin par timer ou par victoire
+  timer_video_couch_shuffle_timer_complete:
+    - video_couch_shuffle_finished
+
+  video_couch_shuffle_finished:
+    - stop_video_mode
+
+  # Relai des events GMC
+  video_couch_shuffle_success:
+    - gmc_video_couch_shuffle_success
+
+  video_couch_shuffle_swap:
+    - gmc_video_couch_shuffle_swap
+
+  video_couch_shuffle_select:
+    - gmc_video_couch_shuffle_select
+
+  video_couch_shuffle_fail:
+    - gmc_video_couch_shuffle_fail

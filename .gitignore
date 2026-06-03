@@ -1,4 +1,18 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
-logs
+# Claude / assistants
+.claude/
+CLAUDE.local.md
+.claude.json
+.claude/settings.local.json
+
+# Python / MPF
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs / runtime
+logs/
+*.log
+crash_report*

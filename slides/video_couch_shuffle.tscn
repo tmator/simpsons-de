@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://ez5h2v9mpr7cx"]
+
+[ext_resource type="Script" path="res://slides/video_couch_shuffle.gd" id="1_vcs1"]
+[ext_resource type="Texture2D" uid="uid://dfyv7ow60mip" path="res://img/fond.png" id="2_vcs2"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_vcs3"]
+
+[node name="VideoCouchShuffle" type="Control" unique_id=4001]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vcs1")
+
+[node name="Fond" type="Sprite2D" parent="." unique_id=4002]
+position = Vector2(960, 540)
+texture = ExtResource("2_vcs2")
+
+[node name="Title" type="Label" parent="." unique_id=4003]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 60.0
+offset_right = 1820.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 110
+text = "COUCH SHUFFLE!"
+
+[node name="TargetOrder" type="Label" parent="." unique_id=4004]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 220.0
+offset_right = 1820.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 44
+text = "Ordre cible :  HOMER  MARGE  BART  LISA  MAGGIE"
+
+[node name="CouchLabel" type="Label" parent="." unique_id=4005]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 490.0
+offset_right = 1820.0
+offset_bottom = 560.0
+theme_override_font_sizes/font_size = 44
+text = "[  Pos.1  ]   [  Pos.2  ]   [  Pos.3  ]   [  Pos.4  ]   [  Pos.5  ]"
+
+[node name="Instructions" type="Label" parent="." unique_id=4006]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 760.0
+offset_right = 1820.0
+offset_bottom = 840.0
+theme_override_font_sizes/font_size = 38
+text = "FLECHES G/D pour selectionner  |  SHIFT+ESPACE pour prendre/poser"
+
+[node name="Timer" type="Label" parent="." unique_id=4007]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 930.0
+offset_right = 1040.0
+offset_bottom = 1010.0
+theme_override_font_sizes/font_size = 60
+script = ExtResource("3_vcs3")
+variable_name = "video_couch_shuffle_video_couch_shuffle_timer_tick"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

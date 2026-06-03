@@ -24,18 +24,22 @@ text = "GAME"
 [node name="score" type="Label" parent="." unique_id=176483344]
 layout_mode = 0
 offset_left = 40.0
-offset_right = 80.0
-offset_bottom = 23.0
+offset_top = 20.0
+offset_right = 1400.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 90
 script = ExtResource("3_mixwp")
 variable_name = "score"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
 [node name="ball" type="Label" parent="." unique_id=1373081296]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 40.0
-offset_right = 80.0
-offset_bottom = 63.0
+offset_left = 1580.0
+offset_top = 20.0
+offset_right = 1880.0
+offset_bottom = 90.0
+horizontal_alignment = 2
+theme_override_font_sizes/font_size = 55
 script = ExtResource("3_mixwp")
 variable_name = "ball"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"

@@ -1,0 +1,77 @@
+#config_version=6
+
+# VIDEO MODE : video_bart_skate
+# Bart évite des obstacles en skate. Gauche/droite pour changer de voie.
+# Action pour sauter. 3 collisions = fin de mode. Timer 30 secondes.
+# Contrôles : video_mode_left / video_mode_right / video_mode_action (saut).
+# Démarrage debug : shift+b -> event debug_start_video_bart_skate
+
+mode:
+  start_events: debug_start_video_bart_skate
+  stop_events:
+    - stop_video_mode
+    - ball_ending
+  priority: 500
+
+# Timer 30 secondes
+timers:
+  video_bart_skate_timer:
+    start_value: 30
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: false
+    control_events:
+      - event: mode_video_bart_skate_started
+        action: start
+
+# Compteur de collisions : 3 hits = fin du mode
+counters:
+  video_bart_skate_hits:
+    count_events: video_bart_skate_hit
+    count_complete_value: 3
+    direction: up
+    reset_on_complete: false
+    events_when_complete: video_bart_skate_too_many_hits
+
+slide_player:
+  mode_video_bart_skate_started: video_bart_skate
+
+# Scoring : 10 000 points par saut réussi
+variable_player:
+  video_bart_skate_jump:
+    score: 10000
+
+event_player:
+  mode_video_bart_skate_started:
+    - test_video_bart_skate_started
+    - gmc_video_mode_start
+    - gmc_video_mode_video_bart_skate_start
+
+  mode_video_bart_skate_stopped:
+    - gmc_video_mode_stop
+    - test_video_bart_skate_stopped
+
+  # Fin par timer ou par trop de collisions
+  timer_video_bart_skate_timer_complete:
+    - video_bart_skate_finished
+
+  video_bart_skate_too_many_hits:
+    - video_bart_skate_finished
+
+  video_bart_skate_finished:
+    - stop_video_mode
+
+  # Relai des events de gameplay vers GMC
+  video_mode_left:
+    - gmc_video_bart_skate_left
+
+  video_mode_right:
+    - gmc_video_bart_skate_right
+
+  video_mode_action:
+    - video_bart_skate_jump
+    - gmc_video_bart_skate_jump
+
+  video_bart_skate_hit:
+    - gmc_video_bart_skate_hit

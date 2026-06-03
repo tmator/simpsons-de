@@ -1,0 +1,86 @@
+#config_version=6
+
+# VIDEO MODE : video_reactor_escape
+# Homer doit choisir la bonne direction pour sortir du réacteur.
+# Gauche/droite/haut/bas pour choisir, action pour valider le choix.
+# 3 mauvais choix = fin de mode. Timer 20 secondes.
+# Contrôles : video_mode_left / right / up / down + video_mode_action.
+# Démarrage debug : shift+n -> event debug_start_video_reactor_escape
+
+mode:
+  start_events: debug_start_video_reactor_escape
+  stop_events:
+    - stop_video_mode
+    - ball_ending
+  priority: 500
+
+# Timer 20 secondes
+timers:
+  video_reactor_escape_timer:
+    start_value: 20
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: false
+    control_events:
+      - event: mode_video_reactor_escape_started
+        action: start
+
+# Compteur de mauvais choix : 3 = fin
+counters:
+  video_reactor_escape_bad_choices:
+    count_events: video_reactor_escape_bad
+    count_complete_value: 3
+    direction: up
+    reset_on_complete: false
+    events_when_complete: video_reactor_escape_failed
+
+slide_player:
+  mode_video_reactor_escape_started: video_reactor_escape
+
+# Scoring : 15 000 par bonne direction
+variable_player:
+  video_reactor_escape_good:
+    score: 15000
+
+event_player:
+  mode_video_reactor_escape_started:
+    - test_video_reactor_escape_started
+    - gmc_video_mode_start
+    - gmc_video_mode_video_reactor_escape_start
+
+  mode_video_reactor_escape_stopped:
+    - gmc_video_mode_stop
+    - test_video_reactor_escape_stopped
+
+  # Fin par timer ou par trop d'erreurs
+  timer_video_reactor_escape_timer_complete:
+    - video_reactor_escape_finished
+
+  video_reactor_escape_failed:
+    - video_reactor_escape_finished
+
+  video_reactor_escape_finished:
+    - stop_video_mode
+
+  # Relai des events de gameplay vers GMC
+  video_mode_left:
+    - gmc_video_reactor_escape_left
+
+  video_mode_right:
+    - gmc_video_reactor_escape_right
+
+  video_mode_up:
+    - gmc_video_reactor_escape_up
+
+  video_mode_down:
+    - gmc_video_reactor_escape_down
+
+  video_mode_action:
+    - gmc_video_reactor_escape_action
+
+  video_reactor_escape_good:
+    - gmc_video_reactor_escape_good
+
+  video_reactor_escape_bad:
+    - gmc_video_reactor_escape_bad

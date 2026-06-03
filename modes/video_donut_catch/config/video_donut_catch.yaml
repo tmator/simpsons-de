@@ -1,0 +1,70 @@
+#config_version=6
+
+# VIDEO MODE : video_donut_catch
+# Le joueur déplace un personnage gauche/droite pour attraper les donuts qui tombent.
+# Durée : 25 secondes. Chaque donut attrapé rapporte 5 000 points.
+# Contrôles : video_mode_left / video_mode_right pour déplacer, video_mode_action pour attraper.
+# Démarrage debug : shift+v -> event debug_start_video_donut_catch
+
+mode:
+  start_events: debug_start_video_donut_catch
+  stop_events:
+    - stop_video_mode
+    - ball_ending
+  priority: 500
+
+# Timer 25 secondes - démarre automatiquement quand le mode commence
+timers:
+  video_donut_catch_timer:
+    start_value: 25
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: false
+    control_events:
+      - event: mode_video_donut_catch_started
+        action: start
+
+# Scoring
+slide_player:
+  mode_video_donut_catch_started: video_donut_catch
+
+variable_player:
+  video_donut_catch_score:
+    score: 5000
+  video_donut_catch_miss:
+    score: 0
+
+# Events : debug, GMC, et gestion de fin de mode
+event_player:
+  mode_video_donut_catch_started:
+    - test_video_donut_catch_started
+    - gmc_video_mode_start
+    - gmc_video_mode_video_donut_catch_start
+
+  mode_video_donut_catch_stopped:
+    - gmc_video_mode_stop
+    - test_video_donut_catch_stopped
+
+  # Fin par timer : on poste finished, qui déclenche stop_video_mode
+  timer_video_donut_catch_timer_complete:
+    - video_donut_catch_finished
+
+  video_donut_catch_finished:
+    - stop_video_mode
+
+  # Relai des events de gameplay vers GMC
+  video_mode_left:
+    - gmc_video_donut_catch_left
+
+  video_mode_right:
+    - gmc_video_donut_catch_right
+
+  video_mode_action:
+    - gmc_video_donut_catch_action
+
+  video_donut_catch_score:
+    - gmc_video_donut_catch_scored
+
+  video_donut_catch_miss:
+    - gmc_video_donut_catch_missed
