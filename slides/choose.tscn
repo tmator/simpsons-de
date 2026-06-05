@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://b02wvd6axw2w0"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_1a550"]
+[ext_resource type="Texture2D" uid="uid://dfyv7ow60mip" path="res://img/fond.png" id="2_fvk2l"]
+[ext_resource type="FontFile" uid="uid://0qltmv3kqj23" path="res://fonts/homer.ttf" id="3_pivpv"]
+[ext_resource type="Texture2D" uid="uid://bgsgkwlexloc1" path="res://img/ba.png" id="4_tysqw"]
+[ext_resource type="Texture2D" uid="uid://jvgchlwn43xb" path="res://img/ma.png" id="5_wytfc"]
+[ext_resource type="Texture2D" uid="uid://ba62sgjwt1yv7" path="res://img/li.png" id="6_my5hl"]
+[ext_resource type="Texture2D" uid="uid://bee0s0f5qlmgo" path="res://img/ho.png" id="7_remtl"]
+
+[node name="Base" type="Control" unique_id=2011035318]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1a550")
+
+[node name="Fond" type="Sprite2D" parent="." unique_id=1180820616]
+position = Vector2(960, 540)
+texture = ExtResource("2_fvk2l")
+
+[node name="Label" type="Label" parent="." unique_id=76492020]
+top_level = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 127.0
+offset_right = 1917.0
+offset_bottom = 257.0
+theme_override_colors/font_color = Color(1, 0.84705883, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_pivpv")
+theme_override_font_sizes/font_size = 130
+text = "Choose your character, man!"
+horizontal_alignment = 1
+
+[node name="Ba" type="Sprite2D" parent="." unique_id=193907857]
+position = Vector2(544, 780)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_tysqw")
+
+[node name="Ma" type="Sprite2D" parent="." unique_id=1511012833]
+position = Vector2(1076.0001, 580.00006)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_wytfc")
+
+[node name="Li" type="Sprite2D" parent="." unique_id=2135420084]
+position = Vector2(1330.0001, 779.00006)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_my5hl")
+
+[node name="Ho" type="Sprite2D" parent="." unique_id=678174780]
+position = Vector2(823, 705.99994)
+scale = Vector2(0.6150944, 0.6150944)
+texture = ExtResource("7_remtl")

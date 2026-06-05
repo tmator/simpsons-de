@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bw7r3j1hvs9yl"]
+[gd_scene format=3 uid="uid://bw7r3j1hvtayl"]
 
-[ext_resource type="Script" path="res://slides/video_bart_skate.gd" id="1_vbs1"]
+[ext_resource type="Script" uid="uid://c1pb8veb0pqeb" path="res://slides/video_bart_skate.gd" id="1_vbs1"]
 [ext_resource type="Texture2D" uid="uid://dfyv7ow60mip" path="res://img/fond.png" id="2_vbs2"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_vbs3"]
 

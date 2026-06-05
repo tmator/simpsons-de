@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://btf246lyjxbjt"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_x1b5x"]
+[ext_resource type="Texture2D" uid="uid://dfyv7ow60mip" path="res://img/fond.png" id="2_ricq7"]
+[ext_resource type="Texture2D" uid="uid://c5l61vhn7ixu0" path="res://img/tv_new.png" id="3_x1b5x"]
+
+[node name="Base" type="Control" unique_id=2011035318]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_x1b5x")
+metadata/_edit_vertical_guides_ = [-874.0, 960.0]
+
+[node name="Fond" type="Sprite2D" parent="." unique_id=1180820616]
+position = Vector2(960, 540)
+texture = ExtResource("2_ricq7")
+
+[node name="TvNew" type="Sprite2D" parent="." unique_id=1206431503]
+position = Vector2(1021, 519)
+texture = ExtResource("3_x1b5x")

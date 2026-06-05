@@ -3,43 +3,106 @@
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_gqrvh"]
 [ext_resource type="Texture2D" uid="uid://dfyv7ow60mip" path="res://img/fond.png" id="2_ojumu"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_mixwp"]
+[ext_resource type="Texture2D" uid="uid://bhe3etgpr14vv" path="res://img/ball.png" id="3_smx5b"]
+[ext_resource type="FontFile" uid="uid://0qltmv3kqj23" path="res://fonts/homer.ttf" id="5_r8cgk"]
+[ext_resource type="Texture2D" uid="uid://msruta5j2lm7" path="res://img/p0.png" id="6_20xw8"]
+[ext_resource type="Texture2D" uid="uid://c6verrt0xfrjd" path="res://img/tableau.png" id="7_du778"]
 
 [node name="Base" type="Control" unique_id=2011035318]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_gqrvh")
+metadata/_edit_horizontal_guides_ = [983.0, 160.0]
+metadata/_edit_vertical_guides_ = [960.0]
 
 [node name="Fond" type="Sprite2D" parent="." unique_id=1180820616]
 position = Vector2(960, 540)
 texture = ExtResource("2_ojumu")
 
-[node name="Label" type="Label" parent="Fond" unique_id=1915287906]
-offset_left = -127.0
-offset_top = -14.0
-offset_right = 79.0
-offset_bottom = 209.0
-theme_override_font_sizes/font_size = 60
-text = "GAME"
+[node name="Ball" type="Sprite2D" parent="Fond" unique_id=1470649610]
+position = Vector2(826.5, -386.5)
+scale = Vector2(0.89912283, 0.89912283)
+texture = ExtResource("3_smx5b")
 
-[node name="score" type="Label" parent="." unique_id=176483344]
+[node name="ball" type="Label" parent="." unique_id=1373081296]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 20.0
-offset_right = 1400.0
-offset_bottom = 130.0
-theme_override_font_sizes/font_size = 90
+offset_left = 1678.0
+offset_top = 104.0
+offset_right = 1812.0
+offset_bottom = 214.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_r8cgk")
+theme_override_font_sizes/font_size = 110
+horizontal_alignment = 2
+script = ExtResource("3_mixwp")
+variable_name = "ball"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="P0" type="Sprite2D" parent="." unique_id=743523625]
+position = Vector2(300, 300)
+texture = ExtResource("6_20xw8")
+
+[node name="Tableau" type="Sprite2D" parent="." unique_id=1325347427]
+position = Vector2(960, 1022)
+texture = ExtResource("7_du778")
+
+[node name="score_p1" type="Label" parent="Tableau" unique_id=176483344]
+offset_left = -949.0
+offset_top = -39.0
+offset_right = -483.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("5_r8cgk")
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 2
 script = ExtResource("3_mixwp")
 variable_name = "score"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 
-[node name="ball" type="Label" parent="." unique_id=1373081296]
-layout_mode = 0
-offset_left = 1580.0
-offset_top = 20.0
-offset_right = 1880.0
-offset_bottom = 90.0
+[node name="score_p2" type="Label" parent="Tableau" unique_id=691104977]
+offset_left = -472.0
+offset_top = -39.0
+offset_right = -6.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("5_r8cgk")
+theme_override_font_sizes/font_size = 80
 horizontal_alignment = 2
-theme_override_font_sizes/font_size = 55
 script = ExtResource("3_mixwp")
-variable_name = "ball"
+variable_name = "score"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score_p3" type="Label" parent="Tableau" unique_id=218695819]
+offset_left = 5.0
+offset_top = -40.0
+offset_right = 471.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("5_r8cgk")
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 2
+script = ExtResource("3_mixwp")
+variable_name = "score"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score_p4" type="Label" parent="Tableau" unique_id=459368112]
+offset_left = 482.0
+offset_top = -39.0
+offset_right = 948.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("5_r8cgk")
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 2
+script = ExtResource("3_mixwp")
+variable_name = "score"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="message" type="Label" parent="." unique_id=520767095]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 507.0
+offset_right = 1920.0
+offset_bottom = 597.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_r8cgk")
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+script = ExtResource("3_mixwp")
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
